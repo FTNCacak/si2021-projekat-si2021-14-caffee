@@ -26,8 +26,11 @@ namespace Caffee
             this.Location = new Point(0, 0);
             this.Size =  new Size(w, h);
 
+            //Loading account related data
+            LoadAccountData();
+
             //Side panel settings
-            HideSideMenuButtons();
+            HideSideMenuContent();
             panel_sideMenu.Size = new Size(38, panel_sideMenu.Height);
             /*TO DO: Na kraju projekta da rucno vratim meni na 38px sirinu zbog glitcha na loadovanju stranice.
             Liniju koda iznad ovog komentara se potom moze obrisati*/
@@ -48,7 +51,7 @@ namespace Caffee
             panel_sideMenu.Size = new Size(38, panel_sideMenu.Height);
             button_showMenu.Visible = true;
             button_hideMenu.Visible = false;
-            HideSideMenuButtons();
+            HideSideMenuContent();
         }
 
         private void button_showMenu_Click(object sender, EventArgs e)
@@ -56,23 +59,65 @@ namespace Caffee
             panel_sideMenu.Size = new Size(216, panel_sideMenu.Height);
             button_showMenu.Visible = false;
             button_hideMenu.Visible = true;
-            ShowSideMenuButtons();
+            ShowSideMenuContent();
         }
 
-        private void ShowSideMenuButtons()
+        private void ShowSideMenuContent()
         {
             button_addTable.Visible = true;
             button_menu.Visible = true;
             button_dailyRecap.Visible = true;
             button_logout.Visible = true;
+            pictureBox_accountPicture.Visible = true;
+            label_accountUsername.Visible = true;
+            label_accountRole.Visible = true;
+            panel_accountPanel.BackColor = Color.FromArgb(255, 176, 137, 104);
         }
 
-        private void HideSideMenuButtons()
+        private void HideSideMenuContent()
         {
             button_addTable.Visible = false;
             button_menu.Visible = false;
             button_dailyRecap.Visible = false;
             button_logout.Visible = false;
+            pictureBox_accountPicture.Visible = false;
+            label_accountUsername.Visible = false;
+            label_accountRole.Visible = false;
+            panel_accountPanel.BackColor = panel_sideMenu.BackColor;
+
+        }
+
+        private void SetAccountDetails(bool isOwner, string username)
+        {
+            label_accountUsername.Text = username;
+
+            if (isOwner == true)
+            {
+                label_accountRole.Text = "Owner";
+                button_dailyRecap.Enabled = true;
+                pictureBox_accountPicture.Image = Properties.Resources.owner;
+            }
+            else
+            {
+                label_accountRole.Text = "Waiter";
+                button_dailyRecap.Enabled = false;
+                pictureBox_accountPicture.Image = Properties.Resources.waiter;
+            }
+        }
+
+        private void LoadAccountData() //funkciju napisati nakon izrade login forme
+        {
+            //ucitavanje podataka o ulogovanom korisniku
+            //pozivanje funkcije setaccountdetails sa prosledjenim podacima
+        }
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
