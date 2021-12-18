@@ -65,6 +65,35 @@ namespace CaffeeData
             }
         }
 
+        public int UpdatePosition(int table_num, int pos_w, int pos_h)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
+            {
+                SqlCommand command = new SqlCommand();
 
+                command.Connection = sqlConnection;
+
+                command.CommandText = string.Format("UPDATE Tables SET position_w = {0}, position_h = {1} WHERE table_number = {2}",
+                    pos_w, pos_h, table_num);
+
+                return command.ExecuteNonQuery();
+            }
+        }
+
+        public int ChangeOccupancy(int table_num, bool occupied)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
+            {
+                SqlCommand command = new SqlCommand();
+
+                command.Connection = sqlConnection;
+
+                command.CommandText = string.Format("UPDATE Tables SET occupied = {0} WHERE table_number = {1}",
+                    !occupied, table_num);
+
+                return command.ExecuteNonQuery();
+            }
+        }
+        
     }
 }
