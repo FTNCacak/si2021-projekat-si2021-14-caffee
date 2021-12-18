@@ -8,7 +8,7 @@ namespace CaffeeData.Models
 {
     public class Item
     {
-        public int Id { get; set; }
+        public int ItemCode { get; set; }
 
         public string Name { get; set; }
 

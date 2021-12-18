@@ -12,5 +12,9 @@ namespace CaffeeData.Models
 
         public bool Occupied { get; set; }
 
+        public int position_w { get; set; }
+
+        public int position_h { get; set; }
+
     }
 }
