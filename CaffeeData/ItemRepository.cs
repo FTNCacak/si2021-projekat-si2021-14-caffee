@@ -63,5 +63,21 @@ namespace CaffeeData
             }
         }
 
+        public int UpdatePrice(int id, decimal newPrice)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
+            {
+                SqlCommand command = new SqlCommand();
+
+                command.Connection = sqlConnection;
+
+                command.CommandText = string.Format("UPDATE Items SET price={0} WHERE item_code={1}", newPrice, id);
+
+                sqlConnection.Open();
+
+                return command.ExecuteNonQuery();
+            }
+        }
+
     }
 }
