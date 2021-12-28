@@ -1,5 +1,4 @@
-﻿using Caffee.Models;
-using CaffeeData.Models;
+﻿using CaffeeData.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -115,7 +114,7 @@ namespace Caffee
 
         private void button_addTable_Click(object sender, EventArgs e)
         {
-            TableButton tb = new TableButton();
+            
         }
     }
 }
