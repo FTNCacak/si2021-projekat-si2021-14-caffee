@@ -114,7 +114,9 @@ namespace Caffee
 
         private void button_addTable_Click(object sender, EventArgs e)
         {
-            
+            TableButton tb = new TableButton();
+            tb.Location = new Point(panelFloor.Width / 2, panelFloor.Height / 2);
+            panelFloor.Controls.Add(tb);
         }
     }
 }

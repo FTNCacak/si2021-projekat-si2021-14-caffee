@@ -73,6 +73,16 @@ namespace Caffee.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap table_picture {
+            get {
+                object obj = ResourceManager.GetObject("table_picture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap waiter {
             get {
                 object obj = ResourceManager.GetObject("waiter", resourceCulture);
