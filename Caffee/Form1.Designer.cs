@@ -44,19 +44,19 @@ namespace Caffee
             this.button_menu = new System.Windows.Forms.Button();
             this.button_addTable = new System.Windows.Forms.Button();
             this.panel_accountPanel = new System.Windows.Forms.Panel();
+            this.panel_accountLabelPanel = new System.Windows.Forms.Panel();
+            this.label_accountRole = new System.Windows.Forms.Label();
+            this.label_accountUsername = new System.Windows.Forms.Label();
+            this.pictureBox_accountPicture = new System.Windows.Forms.PictureBox();
             this.button_showMenu = new System.Windows.Forms.Button();
             this.button_hideMenu = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox_accountPicture = new System.Windows.Forms.PictureBox();
-            this.label_accountUsername = new System.Windows.Forms.Label();
-            this.panel_accountLabelPanel = new System.Windows.Forms.Panel();
-            this.label_accountRole = new System.Windows.Forms.Label();
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_titlebar_logo)).BeginInit();
             this.panel_sideMenu.SuspendLayout();
             this.panel_accountPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_accountPicture)).BeginInit();
             this.panel_accountLabelPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_accountPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_Header
@@ -219,6 +219,7 @@ namespace Caffee
             this.button_addTable.Text = "ADD TABLE";
             this.button_addTable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_addTable.UseVisualStyleBackColor = true;
+            this.button_addTable.Click += new System.EventHandler(this.button_addTable_Click);
             // 
             // panel_accountPanel
             // 
@@ -232,6 +233,52 @@ namespace Caffee
             this.panel_accountPanel.Name = "panel_accountPanel";
             this.panel_accountPanel.Size = new System.Drawing.Size(216, 225);
             this.panel_accountPanel.TabIndex = 0;
+            // 
+            // panel_accountLabelPanel
+            // 
+            this.panel_accountLabelPanel.Controls.Add(this.label_accountRole);
+            this.panel_accountLabelPanel.Controls.Add(this.label_accountUsername);
+            this.panel_accountLabelPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel_accountLabelPanel.Location = new System.Drawing.Point(0, 178);
+            this.panel_accountLabelPanel.Name = "panel_accountLabelPanel";
+            this.panel_accountLabelPanel.Size = new System.Drawing.Size(216, 47);
+            this.panel_accountLabelPanel.TabIndex = 4;
+            // 
+            // label_accountRole
+            // 
+            this.label_accountRole.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label_accountRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_accountRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
+            this.label_accountRole.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label_accountRole.Location = new System.Drawing.Point(0, 21);
+            this.label_accountRole.Name = "label_accountRole";
+            this.label_accountRole.Size = new System.Drawing.Size(216, 21);
+            this.label_accountRole.TabIndex = 4;
+            this.label_accountRole.Text = "Role";
+            this.label_accountRole.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_accountUsername
+            // 
+            this.label_accountUsername.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label_accountUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_accountUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
+            this.label_accountUsername.Location = new System.Drawing.Point(0, 0);
+            this.label_accountUsername.Name = "label_accountUsername";
+            this.label_accountUsername.Size = new System.Drawing.Size(216, 21);
+            this.label_accountUsername.TabIndex = 3;
+            this.label_accountUsername.Text = "Username";
+            this.label_accountUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox_accountPicture
+            // 
+            this.pictureBox_accountPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox_accountPicture.Image = global::Caffee.Properties.Resources.waiter;
+            this.pictureBox_accountPicture.Location = new System.Drawing.Point(44, 44);
+            this.pictureBox_accountPicture.Name = "pictureBox_accountPicture";
+            this.pictureBox_accountPicture.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox_accountPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_accountPicture.TabIndex = 2;
+            this.pictureBox_accountPicture.TabStop = false;
             // 
             // button_showMenu
             // 
@@ -268,54 +315,6 @@ namespace Caffee
             this.panel2.Size = new System.Drawing.Size(990, 652);
             this.panel2.TabIndex = 2;
             // 
-            // pictureBox_accountPicture
-            // 
-            this.pictureBox_accountPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_accountPicture.Image = global::Caffee.Properties.Resources.waiter;
-            this.pictureBox_accountPicture.Location = new System.Drawing.Point(44, 44);
-            this.pictureBox_accountPicture.Name = "pictureBox_accountPicture";
-            this.pictureBox_accountPicture.Size = new System.Drawing.Size(128, 128);
-            this.pictureBox_accountPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_accountPicture.TabIndex = 2;
-            this.pictureBox_accountPicture.TabStop = false;
-            // 
-            // label_accountUsername
-            // 
-            this.label_accountUsername.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label_accountUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_accountUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
-            this.label_accountUsername.Location = new System.Drawing.Point(0, 0);
-            this.label_accountUsername.Name = "label_accountUsername";
-            this.label_accountUsername.Size = new System.Drawing.Size(216, 21);
-            this.label_accountUsername.TabIndex = 3;
-            this.label_accountUsername.Text = "Username";
-            this.label_accountUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_accountUsername.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // panel_accountLabelPanel
-            // 
-            this.panel_accountLabelPanel.Controls.Add(this.label_accountRole);
-            this.panel_accountLabelPanel.Controls.Add(this.label_accountUsername);
-            this.panel_accountLabelPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel_accountLabelPanel.Location = new System.Drawing.Point(0, 178);
-            this.panel_accountLabelPanel.Name = "panel_accountLabelPanel";
-            this.panel_accountLabelPanel.Size = new System.Drawing.Size(216, 47);
-            this.panel_accountLabelPanel.TabIndex = 4;
-            // 
-            // label_accountRole
-            // 
-            this.label_accountRole.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label_accountRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_accountRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
-            this.label_accountRole.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label_accountRole.Location = new System.Drawing.Point(0, 21);
-            this.label_accountRole.Name = "label_accountRole";
-            this.label_accountRole.Size = new System.Drawing.Size(216, 21);
-            this.label_accountRole.TabIndex = 4;
-            this.label_accountRole.Text = "Role";
-            this.label_accountRole.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_accountRole.Click += new System.EventHandler(this.label2_Click);
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,8 +332,8 @@ namespace Caffee
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_titlebar_logo)).EndInit();
             this.panel_sideMenu.ResumeLayout(false);
             this.panel_accountPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_accountPicture)).EndInit();
             this.panel_accountLabelPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_accountPicture)).EndInit();
             this.ResumeLayout(false);
 
         }

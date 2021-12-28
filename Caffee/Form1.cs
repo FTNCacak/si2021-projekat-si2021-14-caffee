@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Caffee.Models;
+using CaffeeData.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -110,14 +112,10 @@ namespace Caffee
             //ucitavanje podataka o ulogovanom korisniku
             //pozivanje funkcije setaccountdetails sa prosledjenim podacima
         }
-        private void label1_Click(object sender, EventArgs e)
+
+        private void button_addTable_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            TableButton tb = new TableButton();
         }
     }
 }

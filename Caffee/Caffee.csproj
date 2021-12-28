@@ -52,6 +52,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\TableButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -85,6 +88,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\waiter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CaffeeData\CaffeeData.csproj">
+      <Project>{39275E54-EE9C-43CF-A6B3-0F3DFB44BC18}</Project>
+      <Name>CaffeeData</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
