@@ -38,8 +38,9 @@ namespace CaffeeData
 
                     orders.Add(o);
 
-                    return orders;
                 }
+
+                return orders;
             }
         }
 
