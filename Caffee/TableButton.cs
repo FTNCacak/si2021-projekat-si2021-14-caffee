@@ -20,11 +20,11 @@ namespace Caffee
 
         public TableButton()
         {
-            int table_dimension = (int)(85 * Screen.PrimaryScreen.Bounds.Height) / 768;
+            int table_dimension = (int)(120 * Screen.PrimaryScreen.Bounds.Height) / 768;
             this.Text = "";
             this.Name = "table";
             this.Size = new Size(table_dimension,table_dimension);
-            this.BackgroundImage = Properties.Resources.table_picture;
+            this.BackgroundImage = Properties.Resources.table2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.FlatStyle = FlatStyle.Flat;
             this.FlatAppearance.BorderSize = 0;
@@ -57,11 +57,15 @@ namespace Caffee
             posXEnd = this.Location.X;
             posYEnd = this.Location.Y;
 
-            if ((posXStart == posXEnd) && (posYStart == posYEnd))
+            if ((posXStart == posXEnd) && (posYStart == posYEnd) && e.Button == MouseButtons.Left)
             {
                 ShowOrders();
             }
-            //Console.WriteLine("StartX: {0}, StartY: {1}\nEndX: {2}, EndY: {3}\n\n", posXStart, posYStart, posXEnd, posYEnd);
+            
+            if(e.Button == MouseButtons.Right)
+            {
+                this.Dispose();
+            }
         }
     }
 }

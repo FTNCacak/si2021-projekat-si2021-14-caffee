@@ -13,6 +13,7 @@ namespace Caffee
 {
     public partial class MainWindow : Form
     {
+        ToolTip tableToolTip = new ToolTip();
         public MainWindow()
         {
             InitializeComponent();
@@ -117,6 +118,7 @@ namespace Caffee
         {
             TableButton tb = new TableButton();
             tb.Location = new Point(panelFloor.Width / 2, panelFloor.Height / 2);
+            tableToolTip.SetToolTip(tb, "Drag to move.\nRight-click to remove.");
             panelFloor.Controls.Add(tb);
         }
     }
