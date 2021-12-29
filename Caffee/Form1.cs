@@ -16,6 +16,7 @@ namespace Caffee
         public MainWindow()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
         }
 
         private void MainWindow_Load(object sender, EventArgs e)
