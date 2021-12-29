@@ -44,10 +44,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BillBusiness.cs" />
+    <Compile Include="ItemBusiness.cs" />
+    <Compile Include="OrderBsiness.cs" />
+    <Compile Include="OrderItemBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TableBusiness.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CaffeeData\CaffeeData.csproj">
+      <Project>{39275e54-ee9c-43cf-a6b3-0f3dfb44bc18}</Project>
+      <Name>CaffeeData</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
