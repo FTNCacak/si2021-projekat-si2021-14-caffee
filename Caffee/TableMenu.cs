@@ -16,5 +16,15 @@ namespace Caffee
         {
             InitializeComponent();
         }
+
+        private void TableMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

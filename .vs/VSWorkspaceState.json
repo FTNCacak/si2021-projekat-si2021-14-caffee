@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Caffee",
-    "\\CaffeeData\\Database"
+    "\\Caffee"
   ],
-  "SelectedNode": "\\Caffee\\Caffee.sln",
+  "SelectedNode": "\\Caffee\\TableMenu.cs",
   "PreviewInSolutionExplorer": false
 }

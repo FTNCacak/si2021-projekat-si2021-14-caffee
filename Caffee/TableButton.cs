@@ -16,6 +16,8 @@ namespace Caffee
         private int posXEnd;
         private int posYEnd;
 
+        
+
         public TableButton()
         {
             int table_dimension = (int)(85 * Screen.PrimaryScreen.Bounds.Height) / 768;
@@ -37,7 +39,9 @@ namespace Caffee
         {
             TableMenu tm = new TableMenu();
             tm.StartPosition = FormStartPosition.Manual;
-            tm.Location = new Point(this.Location.X, this.Location.Y);
+            int dPosX = (Screen.PrimaryScreen.Bounds.Width / 2) - (tm.Size.Width / 2);
+            int dPosY = (Screen.PrimaryScreen.Bounds.Height / 2) - (tm.Size.Height / 2);
+            tm.Location = new Point(dPosX, dPosY);
             tm.ShowDialog();
         }
 
