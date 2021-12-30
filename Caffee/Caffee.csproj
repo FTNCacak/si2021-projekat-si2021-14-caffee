@@ -127,5 +127,20 @@
   <ItemGroup>
     <None Include="Resources\table3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove_item_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_item.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_item.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove_item_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus_thick.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -27,7 +27,8 @@ namespace Caffee
         {
             /*dataGridView_menuItems.ColumnCount = 2;
             dataGridView_menuItems.Columns[0].Name = "Item name";
-            dataGridView_menuItems.Columns[1].Name = "Price";*/
+            dataGridView_menuItems.Columns[1].Name = "Price";
+            dataGridView_menuItems.Columns[1].FillWeight = 20;*/
 
             //temporary test data for design purpose
             string[] row = new string[] { "Kokakola 0.33l", "75.00" };
@@ -40,15 +41,7 @@ namespace Caffee
             dataGridView_menuItems.Rows.Add(row);
             row = new string[] { "Kisela voda", "30.00" };
             dataGridView_menuItems.Rows.Add(row);
-            //temporary test data for design purpose
-
-            DataGridViewButtonColumn btnDelete = new DataGridViewButtonColumn();
-            btnDelete.HeaderText = "";
-            btnDelete.Text = "-";
-            btnDelete.Name = "btn";
-            btnDelete.FillWeight = 12;
-            btnDelete.UseColumnTextForButtonValue = true;
-            dataGridView_menuItems.Columns.Add(btnDelete);
+            //temporary test data for design p
         }
 
         private void dataGridView_menuItems_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -57,7 +50,5 @@ namespace Caffee
             e.CellStyle.SelectionBackColor = Color.FromArgb(255, 230, 204, 178);
             e.CellStyle.SelectionForeColor = Color.FromArgb(255, 99, 65, 44);
         }
-
-        
     }
 }
