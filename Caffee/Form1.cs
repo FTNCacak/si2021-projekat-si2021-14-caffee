@@ -121,5 +121,15 @@ namespace Caffee
             tableToolTip.SetToolTip(tb, "Drag to move.\nRight-click to remove.");
             panelFloor.Controls.Add(tb);
         }
+
+        private void button_menu_Click(object sender, EventArgs e)
+        {
+            MenuSettings ms = new MenuSettings();
+            ms.StartPosition = FormStartPosition.Manual;
+            int dPosX = (Screen.PrimaryScreen.Bounds.Width / 2) - (ms.Size.Width / 2);
+            int dposY = (Screen.PrimaryScreen.Bounds.Height / 2) - (ms.Size.Height / 2);
+            ms.Location = new Point(dPosX, dposY);
+            ms.ShowDialog();
+        }
     }
 }
