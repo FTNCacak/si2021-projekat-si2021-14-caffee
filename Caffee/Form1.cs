@@ -36,12 +36,12 @@ namespace Caffee
             HideSideMenuContent();
             panel_sideMenu.Size = new Size(38, panel_sideMenu.Height);
             /*TO DO: Na kraju projekta da rucno vratim meni na 38px sirinu zbog glitcha na loadovanju stranice.
-            Liniju koda iznad ovog komentara se potom moze obrisati*/
+            Linija koda iznad ovog komentara se potom moze obrisati*/
         }
 
         private void button_close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close(); //ovo da pogledam jos jednom da vidim da li se ovako gasi aplikacija
         }
 
         private void button_minimize_Click(object sender, EventArgs e)
@@ -129,7 +129,7 @@ namespace Caffee
             int dPosX = (Screen.PrimaryScreen.Bounds.Width / 2) - (ms.Size.Width / 2);
             int dposY = (Screen.PrimaryScreen.Bounds.Height / 2) - (ms.Size.Height / 2);
             ms.Location = new Point(dPosX, dposY);
-            ms.ShowDialog();
+            ms.ShowDialog(); //ShowDialog()se gasi sa Dispose()               
         }
     }
 }

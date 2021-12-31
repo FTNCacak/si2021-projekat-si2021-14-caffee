@@ -18,18 +18,24 @@ namespace Caffee
             InitializeColumns();
         }
 
+        //enabling double buffering
+        /*protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams handleparam = base.CreateParams;
+                handleparam.ExStyle |= 0x02000000;
+                return handleparam;
+            }
+        }*/
+
         private void button_close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Dispose();
         }
 
         private void InitializeColumns()
         {
-            /*dataGridView_menuItems.ColumnCount = 2;
-            dataGridView_menuItems.Columns[0].Name = "Item name";
-            dataGridView_menuItems.Columns[1].Name = "Price";
-            dataGridView_menuItems.Columns[1].FillWeight = 20;*/
-
             //temporary test data for design purpose
             string[] row = new string[] { "Kokakola 0.33l", "75.00" };
             dataGridView_menuItems.Rows.Add(row);
@@ -41,7 +47,7 @@ namespace Caffee
             dataGridView_menuItems.Rows.Add(row);
             row = new string[] { "Kisela voda", "30.00" };
             dataGridView_menuItems.Rows.Add(row);
-            //temporary test data for design p
+            //temporary test data for design purpose
         }
 
         private void dataGridView_menuItems_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -49,6 +55,22 @@ namespace Caffee
             e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Bold);
             e.CellStyle.SelectionBackColor = Color.FromArgb(255, 230, 204, 178);
             e.CellStyle.SelectionForeColor = Color.FromArgb(255, 99, 65, 44);
+        }
+
+        private void buttonDeleteItem_Click(object sender, EventArgs e)
+        {
+            using (DeleteItemConfirm confirmDelete = new DeleteItemConfirm())
+            {
+                confirmDelete.StartPosition = FormStartPosition.Manual;
+                int dPosX = (Screen.PrimaryScreen.Bounds.Width / 2) - (confirmDelete.Size.Width / 2);
+                int dposY = (Screen.PrimaryScreen.Bounds.Height / 2) - (confirmDelete.Size.Height / 2);
+                confirmDelete.Location = new Point(dPosX, dposY);
+                if (confirmDelete.ShowDialog()==System.Windows.Forms.DialogResult.OK)
+                {
+                    //obrisati artikal iz baze i iz liste
+                }
+            }
+                       
         }
     }
 }

@@ -29,22 +29,22 @@ namespace Caffee
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuSettings));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_Header = new System.Windows.Forms.Panel();
             this.label_title = new System.Windows.Forms.Label();
+            this.pictureBox_titlebar_logo = new System.Windows.Forms.PictureBox();
+            this.button_close = new System.Windows.Forms.Button();
             this.dataGridView_menuItems = new System.Windows.Forms.DataGridView();
             this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonDeleteItem = new System.Windows.Forms.Button();
             this.buttonEditItem = new System.Windows.Forms.Button();
             this.buttonAddItem = new System.Windows.Forms.Button();
-            this.pictureBox_titlebar_logo = new System.Windows.Forms.PictureBox();
-            this.button_close = new System.Windows.Forms.Button();
             this.panel_Header.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_menuItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_titlebar_logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_menuItems)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_Header
@@ -70,6 +70,33 @@ namespace Caffee
             this.label_title.TabIndex = 4;
             this.label_title.Text = "Menu Settings";
             // 
+            // pictureBox_titlebar_logo
+            // 
+            this.pictureBox_titlebar_logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_titlebar_logo.BackgroundImage")));
+            this.pictureBox_titlebar_logo.Location = new System.Drawing.Point(6, 0);
+            this.pictureBox_titlebar_logo.Name = "pictureBox_titlebar_logo";
+            this.pictureBox_titlebar_logo.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox_titlebar_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox_titlebar_logo.TabIndex = 1;
+            this.pictureBox_titlebar_logo.TabStop = false;
+            // 
+            // button_close
+            // 
+            this.button_close.AccessibleDescription = "";
+            this.button_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_close.BackgroundImage")));
+            this.button_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_close.FlatAppearance.BorderSize = 0;
+            this.button_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_close.Font = new System.Drawing.Font("Microsoft Tai Le", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
+            this.button_close.Location = new System.Drawing.Point(630, 0);
+            this.button_close.Name = "button_close";
+            this.button_close.Size = new System.Drawing.Size(46, 32);
+            this.button_close.TabIndex = 1;
+            this.button_close.UseVisualStyleBackColor = true;
+            this.button_close.Click += new System.EventHandler(this.button_close_Click);
+            // 
             // dataGridView_menuItems
             // 
             this.dataGridView_menuItems.AllowUserToAddRows = false;
@@ -78,26 +105,26 @@ namespace Caffee
             this.dataGridView_menuItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_menuItems.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
             this.dataGridView_menuItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(204)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_menuItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(204)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_menuItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_menuItems.ColumnHeadersHeight = 25;
             this.dataGridView_menuItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ItemName,
             this.ItemPrice});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(204)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_menuItems.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(204)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_menuItems.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_menuItems.EnableHeadersVisualStyles = false;
             this.dataGridView_menuItems.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.dataGridView_menuItems.Location = new System.Drawing.Point(12, 46);
@@ -135,6 +162,7 @@ namespace Caffee
             this.buttonDeleteItem.Size = new System.Drawing.Size(35, 35);
             this.buttonDeleteItem.TabIndex = 5;
             this.buttonDeleteItem.UseVisualStyleBackColor = true;
+            this.buttonDeleteItem.Click += new System.EventHandler(this.buttonDeleteItem_Click);
             // 
             // buttonEditItem
             // 
@@ -160,33 +188,6 @@ namespace Caffee
             this.buttonAddItem.TabIndex = 3;
             this.buttonAddItem.UseVisualStyleBackColor = true;
             // 
-            // pictureBox_titlebar_logo
-            // 
-            this.pictureBox_titlebar_logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_titlebar_logo.BackgroundImage")));
-            this.pictureBox_titlebar_logo.Location = new System.Drawing.Point(6, 0);
-            this.pictureBox_titlebar_logo.Name = "pictureBox_titlebar_logo";
-            this.pictureBox_titlebar_logo.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox_titlebar_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox_titlebar_logo.TabIndex = 1;
-            this.pictureBox_titlebar_logo.TabStop = false;
-            // 
-            // button_close
-            // 
-            this.button_close.AccessibleDescription = "";
-            this.button_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_close.BackgroundImage")));
-            this.button_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_close.FlatAppearance.BorderSize = 0;
-            this.button_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_close.Font = new System.Drawing.Font("Microsoft Tai Le", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
-            this.button_close.Location = new System.Drawing.Point(630, 0);
-            this.button_close.Name = "button_close";
-            this.button_close.Size = new System.Drawing.Size(46, 32);
-            this.button_close.TabIndex = 1;
-            this.button_close.UseVisualStyleBackColor = true;
-            this.button_close.Click += new System.EventHandler(this.button_close_Click);
-            // 
             // MenuSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,8 +204,8 @@ namespace Caffee
             this.Text = "MenuSettings";
             this.panel_Header.ResumeLayout(false);
             this.panel_Header.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_menuItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_titlebar_logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_menuItems)).EndInit();
             this.ResumeLayout(false);
 
         }

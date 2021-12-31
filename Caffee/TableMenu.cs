@@ -24,7 +24,7 @@ namespace Caffee
 
         private void button_close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Dispose();
         }
     }
 }
