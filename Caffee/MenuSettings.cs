@@ -15,19 +15,8 @@ namespace Caffee
         public MenuSettings()
         {
             InitializeComponent();
-            InitializeColumns();
+            InitializeColumns(); // <--- test funkcija
         }
-
-        //enabling double buffering
-        /*protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams handleparam = base.CreateParams;
-                handleparam.ExStyle |= 0x02000000;
-                return handleparam;
-            }
-        }*/
 
         private void button_close_Click(object sender, EventArgs e)
         {
@@ -71,6 +60,41 @@ namespace Caffee
                 }
             }
                        
+        }
+
+        private void buttonAddItem_Click(object sender, EventArgs e)
+        {
+            using (AddItem addItem = new AddItem())
+            {
+                addItem.StartPosition = FormStartPosition.Manual;
+                int dPosX = (Screen.PrimaryScreen.Bounds.Width / 2) - (addItem.Size.Width / 2);
+                int dposY = (Screen.PrimaryScreen.Bounds.Height / 2) - (addItem.Size.Height / 2);
+                addItem.Location = new Point(dPosX, dposY);
+                if (addItem.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    //refresh list
+                    // ovo je samo test ---> InitializeColumns();
+                }
+
+            }
+            
+            
+        }
+
+        private void buttonEditItem_Click(object sender, EventArgs e)
+        {
+            using (EditItem editItem = new EditItem())
+            {
+                editItem.StartPosition = FormStartPosition.Manual;
+                int dPosX = (Screen.PrimaryScreen.Bounds.Width / 2) - (editItem.Size.Width / 2);
+                int dposY = (Screen.PrimaryScreen.Bounds.Height / 2) - (editItem.Size.Height / 2);
+                editItem.Location = new Point(dPosX, dposY);
+                if (editItem.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    //refresh list
+                }
+
+            }
         }
     }
 }

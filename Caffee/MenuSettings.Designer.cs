@@ -175,6 +175,7 @@ namespace Caffee
             this.buttonEditItem.Size = new System.Drawing.Size(35, 35);
             this.buttonEditItem.TabIndex = 4;
             this.buttonEditItem.UseVisualStyleBackColor = true;
+            this.buttonEditItem.Click += new System.EventHandler(this.buttonEditItem_Click);
             // 
             // buttonAddItem
             // 
@@ -187,6 +188,7 @@ namespace Caffee
             this.buttonAddItem.Size = new System.Drawing.Size(35, 35);
             this.buttonAddItem.TabIndex = 3;
             this.buttonAddItem.UseVisualStyleBackColor = true;
+            this.buttonAddItem.Click += new System.EventHandler(this.buttonAddItem_Click);
             // 
             // MenuSettings
             // 
