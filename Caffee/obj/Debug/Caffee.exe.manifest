@@ -49,19 +49,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>LqHKfHVMgZayZrRb747zF7LC0kBupJvKd042cauqTSo=</dsig:DigestValue>
+        <dsig:DigestValue>CEvlDj1IcRDsISv1fzFXWxRj5zdqfg194bdoJbmK4F8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CaffeeData.dll" size="13824">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CaffeeData.dll" size="14336">
       <assemblyIdentity name="CaffeeData" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZPOTNoxGq6xeb0LRHiRpqR25wkkKmx2CDLSjJsJNLN0=</dsig:DigestValue>
+        <dsig:DigestValue>DTqnSy6O/jVU7NXoimUIkxRkilo4LfdSaBcsQoEu6ZM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

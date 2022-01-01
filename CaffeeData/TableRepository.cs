@@ -94,6 +94,27 @@ namespace CaffeeData
                 return command.ExecuteNonQuery();
             }
         }
-        
+
+        public int DeleteTable(int tableNum)
+        {
+            using(SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
+            {
+                SqlCommand command = new SqlCommand();
+                command.Connection = sqlConnection;
+                command.CommandText = string.Format("DELETE FROM Tables WHERE table_number = {0}", 
+                    tableNum);
+                return command.ExecuteNonQuery();
+            }
+        }
+        public int ResetData()
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
+            {
+                SqlCommand command = new SqlCommand();
+                command.Connection = sqlConnection;
+                command.CommandText = string.Format("ALTER Tables table_number AUTO_INCREMENT");
+                return command.ExecuteNonQuery();
+            }
+        }
     }
 }

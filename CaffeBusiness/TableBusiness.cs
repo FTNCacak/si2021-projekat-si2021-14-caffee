@@ -34,5 +34,7 @@ namespace CaffeBusiness
         {
             return tableRepository.ChangeOccupancy(table_num, occupied) != 0;
         }
+
+        
     }
 }
