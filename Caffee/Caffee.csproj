@@ -84,6 +84,24 @@
     <Compile Include="AddItem.Designer.cs">
       <DependentUpon>AddItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChooseWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseWindow.Designer.cs">
+      <DependentUpon>ChooseWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateOwnerAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateOwnerAccount.Designer.cs">
+      <DependentUpon>CreateOwnerAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateWaiterAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateWaiterAccount.Designer.cs">
+      <DependentUpon>CreateWaiterAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeleteItemConfirm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +119,18 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoWarningError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoWarningError.Designer.cs">
+      <DependentUpon>InfoWarningError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuSettings.cs">
       <SubType>Form</SubType>
@@ -122,6 +152,15 @@
     <EmbeddedResource Include="AddItem.resx">
       <DependentUpon>AddItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChooseWindow.resx">
+      <DependentUpon>ChooseWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateOwnerAccount.resx">
+      <DependentUpon>CreateOwnerAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateWaiterAccount.resx">
+      <DependentUpon>CreateWaiterAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeleteItemConfirm.resx">
       <DependentUpon>DeleteItemConfirm.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +169,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoWarningError.resx">
+      <DependentUpon>InfoWarningError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuSettings.resx">
       <DependentUpon>MenuSettings.cs</DependentUpon>
@@ -212,6 +257,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\warning1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
