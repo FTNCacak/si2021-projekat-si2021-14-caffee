@@ -49,11 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-<<<<<<< HEAD
-        <dsig:DigestValue>CEvlDj1IcRDsISv1fzFXWxRj5zdqfg194bdoJbmK4F8=</dsig:DigestValue>
-=======
         <dsig:DigestValue>dkZW75JxZJm41wv5kskUCMPFS+q2vPGHJ9RxDpS3/F0=</dsig:DigestValue>
->>>>>>> presentationLayer
       </hash>
     </dependentAssembly>
   </dependency>

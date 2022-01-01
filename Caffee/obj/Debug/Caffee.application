@@ -14,11 +14,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-<<<<<<< HEAD
-        <dsig:DigestValue>UxP36ochgMOPc0PsSUr8oSy/Q/YZh/CH5ukcIlco79U=</dsig:DigestValue>
-=======
-        <dsig:DigestValue>gNV0NiTg3FQpVaZVXYykpt9AU/40ZyTiB0jaJtRF6pQ=</dsig:DigestValue>
->>>>>>> presentationLayer
+        <dsig:DigestValue>G0cg60D4eBgs5zqUX2LVsdA1c5YJu+TuQh8/Fl6bqPg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
