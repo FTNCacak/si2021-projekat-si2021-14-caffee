@@ -20,6 +20,7 @@ D:\SI PROJEKAT\si2021-projekat-si2021-14-caffee\Caffee\obj\Debug\Caffee.exe.mani
 D:\SI PROJEKAT\si2021-projekat-si2021-14-caffee\Caffee\obj\Debug\Caffee.application
 D:\SI PROJEKAT\si2021-projekat-si2021-14-caffee\Caffee\obj\Debug\Caffee.AddItem.resources
 D:\SI PROJEKAT\si2021-projekat-si2021-14-caffee\Caffee\obj\Debug\Caffee.EditItem.resources
+<<<<<<< HEAD
 C:\Users\pajo\source\repos\si2021-projekat-si2021-14-caffee\Caffee\bin\Debug\Caffee.exe.config
 C:\Users\pajo\source\repos\si2021-projekat-si2021-14-caffee\Caffee\bin\Debug\Caffee.exe.manifest
 C:\Users\pajo\source\repos\si2021-projekat-si2021-14-caffee\Caffee\bin\Debug\Caffee.application
@@ -44,3 +45,10 @@ C:\Users\pajo\source\repos\si2021-projekat-si2021-14-caffee\Caffee\obj\Debug\Caf
 C:\Users\pajo\source\repos\si2021-projekat-si2021-14-caffee\Caffee\obj\Debug\Caffee.csproj.CopyComplete
 C:\Users\pajo\source\repos\si2021-projekat-si2021-14-caffee\Caffee\obj\Debug\Caffee.exe
 C:\Users\pajo\source\repos\si2021-projekat-si2021-14-caffee\Caffee\obj\Debug\Caffee.pdb
+=======
+D:\SI PROJEKAT\si2021-projekat-si2021-14-caffee\Caffee\obj\Debug\Caffee.CreateOwnerAccount.resources
+D:\SI PROJEKAT\si2021-projekat-si2021-14-caffee\Caffee\obj\Debug\Caffee.CreateWaiterAccount.resources
+D:\SI PROJEKAT\si2021-projekat-si2021-14-caffee\Caffee\obj\Debug\Caffee.Login.resources
+D:\SI PROJEKAT\si2021-projekat-si2021-14-caffee\Caffee\obj\Debug\Caffee.ChooseWindow.resources
+D:\SI PROJEKAT\si2021-projekat-si2021-14-caffee\Caffee\obj\Debug\Caffee.InfoWarningError.resources
+>>>>>>> presentationLayer

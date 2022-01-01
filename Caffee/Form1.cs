@@ -42,6 +42,7 @@ namespace Caffee
         private void button_close_Click(object sender, EventArgs e)
         {
             this.Close(); //ovo da pogledam jos jednom da vidim da li se ovako gasi aplikacija
+            //application.exit je -----da promenim na kraju
         }
 
         private void button_minimize_Click(object sender, EventArgs e)
@@ -98,13 +99,13 @@ namespace Caffee
             {
                 label_accountRole.Text = "Owner";
                 button_dailyRecap.Enabled = true;
-                pictureBox_accountPicture.Image = Properties.Resources.owner;
+                pictureBox_accountPicture.BackgroundImage = Properties.Resources.owner;
             }
             else
             {
                 label_accountRole.Text = "Waiter";
                 button_dailyRecap.Enabled = false;
-                pictureBox_accountPicture.Image = Properties.Resources.waiter;
+                pictureBox_accountPicture.BackgroundImage = Properties.Resources.waiter;
             }
         }
 
