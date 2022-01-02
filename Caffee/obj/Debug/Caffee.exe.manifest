@@ -42,26 +42,38 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Caffee.exe" size="7045056">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CaffeBusiness.dll" size="6144">
+      <assemblyIdentity name="CaffeBusiness" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>iUCjh4VlTOSLMlQfnjsUtdXKfPENyetauTBAuwofJTE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Caffee.exe" size="7046080">
       <assemblyIdentity name="Caffee" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>dkZW75JxZJm41wv5kskUCMPFS+q2vPGHJ9RxDpS3/F0=</dsig:DigestValue>
+        <dsig:DigestValue>wEwaHO3Za2mOMZf4d/ngUEsGoRLw4s0dH3etm3Trrp0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CaffeeData.dll" size="14336">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CaffeeData.dll" size="14848">
       <assemblyIdentity name="CaffeeData" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>DTqnSy6O/jVU7NXoimUIkxRkilo4LfdSaBcsQoEu6ZM=</dsig:DigestValue>
+        <dsig:DigestValue>48KHLYK9MzERY0NfhRYUH0UgsP8+lMQ8/EV7g1aJ+K8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

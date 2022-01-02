@@ -214,6 +214,10 @@
     <None Include="Resources\waiter.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CaffeBusiness\CaffeBusiness.csproj">
+      <Project>{6BE05B9F-1D5F-4FC8-8005-2BC88726EC4E}</Project>
+      <Name>CaffeBusiness</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CaffeeData\CaffeeData.csproj">
       <Project>{39275E54-EE9C-43CF-A6B3-0F3DFB44BC18}</Project>
       <Name>CaffeeData</Name>

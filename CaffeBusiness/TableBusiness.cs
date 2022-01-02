@@ -34,7 +34,15 @@ namespace CaffeBusiness
         {
             return tableRepository.ChangeOccupancy(table_num, occupied) != 0;
         }
-
+        //method that returns true if record is deleted
+        public bool deleteTable(int tableNum)
+        {
+            return tableRepository.DeleteTable(tableNum) != 0;  
+        }
+        //public int returnLatestId()
+        //{
+        //    return tableRepository.GetLatestId();
+        //}
         
     }
 }

@@ -1,4 +1,5 @@
-﻿using CaffeeData.Models;
+﻿using CaffeBusiness;
+using CaffeeData.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,11 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace Caffee
 {
     public partial class MainWindow : Form
     {
+        private readonly BillBusiness billBusiness = new BillBusiness();
+        private readonly TableBusiness tableBusiness = new TableBusiness();
+
         ToolTip tableToolTip = new ToolTip();
         public MainWindow()
         {
@@ -37,10 +40,28 @@ namespace Caffee
             panel_sideMenu.Size = new Size(38, panel_sideMenu.Height);
             /*TO DO: Na kraju projekta da rucno vratim meni na 38px sirinu zbog glitcha na loadovanju stranice.
             Linija koda iznad ovog komentara se potom moze obrisati*/
+
+            if(tableBusiness.getAllTables().Count > 0)
+            {
+                foreach(Table table in tableBusiness.getAllTables())
+                {
+                    TableButton tb = new TableButton();
+                    tb.id = table.Id;
+                    tb.Location = new Point(table.position_w, table.position_h);
+                    tableToolTip.SetToolTip(tb, "Drag to move.\nRight-click to remove.");
+                    panelFloor.Controls.Add(tb);
+                    
+                }
+            }
         }
 
         private void button_close_Click(object sender, EventArgs e)
         {
+            foreach (Table table in tableBusiness.getAllTables())
+            {
+                tableBusiness.updateTable(table.Id,table.position_w,table.position_h);
+
+            }
             this.Close(); //ovo da pogledam jos jednom da vidim da li se ovako gasi aplikacija
             //application.exit je -----da promenim na kraju
         }
@@ -119,8 +140,15 @@ namespace Caffee
         {
             TableButton tb = new TableButton();
             tb.Location = new Point(panelFloor.Width / 2, panelFloor.Height / 2);
+            Table table = new Table();
+            table.Occupied = false;
+            table.position_h = panelFloor.Height / 2;
+            table.position_w= panelFloor.Width / 2;
+            tableBusiness.insertTable(table);
+            tb.id = tableBusiness.getAllTables().Last().Id;
             tableToolTip.SetToolTip(tb, "Drag to move.\nRight-click to remove.");
             panelFloor.Controls.Add(tb);
+
         }
 
         private void button_menu_Click(object sender, EventArgs e)

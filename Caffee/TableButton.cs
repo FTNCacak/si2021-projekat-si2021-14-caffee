@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Diagnostics;
+using CaffeBusiness;
 
 namespace Caffee
 {
@@ -15,9 +16,9 @@ namespace Caffee
         private int posYStart;
         private int posXEnd;
         private int posYEnd;
+        public int id;
 
-        
-
+        private readonly TableBusiness tableBusiness = new TableBusiness();
         public TableButton()
         {
             int table_dimension = (int)(120 * Screen.PrimaryScreen.Bounds.Height) / 768;
@@ -57,6 +58,10 @@ namespace Caffee
             posXEnd = this.Location.X;
             posYEnd = this.Location.Y;
 
+            if (e.Button == MouseButtons.Left)
+            {
+                tableBusiness.updateTable(id, posXEnd, posYEnd);
+            }
             if ((posXStart == posXEnd) && (posYStart == posYEnd) && e.Button == MouseButtons.Left)
             {
                 ShowOrders();
@@ -64,8 +69,10 @@ namespace Caffee
             
             if(e.Button == MouseButtons.Right)
             {
+                tableBusiness.deleteTable(id);
                 this.Dispose();
             }
+            
         }
     }
 }

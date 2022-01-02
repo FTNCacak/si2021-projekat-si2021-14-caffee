@@ -7,14 +7,14 @@
     <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Caffee.exe.manifest" size="4740">
+    <dependentAssembly dependencyType="install" codebase="Caffee.exe.manifest" size="5383">
       <assemblyIdentity name="Caffee.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>G0cg60D4eBgs5zqUX2LVsdA1c5YJu+TuQh8/Fl6bqPg=</dsig:DigestValue>
+        <dsig:DigestValue>a9y5G78Yp1fw3UUzXo3Lfsnv5zNkhg4Jbslnzielw1U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
