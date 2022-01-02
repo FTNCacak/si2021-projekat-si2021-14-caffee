@@ -24,9 +24,13 @@ namespace CaffeBusiness
             return itemRepository.InsertItem(i) != 0;
         }
         //invokes UpdatePrice method from ItemRepository on DataLayer and returns true if number of affected rows is !=0
-        public bool updatePrice(int id, decimal price)
+        public bool updatePrice(int id, decimal price, string name)
         {
-            return itemRepository.UpdatePrice(id,price) != 0;
+            return itemRepository.UpdatePriceAndName(id,price,name) != 0;
+        }
+        public bool deleteItem(int id)
+        {
+            return itemRepository.DeleteItem(id) != 0;      
         }
     }
 }

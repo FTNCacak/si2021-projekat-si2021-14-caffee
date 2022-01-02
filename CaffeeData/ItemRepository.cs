@@ -63,17 +63,19 @@ namespace CaffeeData
             }
         }
 
-        public int UpdatePrice(int id, decimal newPrice)
+        public int UpdatePriceAndName(int id, decimal newPrice , string itemName)
         {
             using (SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
             {
+                
+
                 SqlCommand command = new SqlCommand();
 
                 command.Connection = sqlConnection;
 
-                command.CommandText = string.Format("UPDATE Items SET price={0} WHERE item_code={1}", newPrice, id);
-
                 sqlConnection.Open();
+
+                command.CommandText = string.Format("UPDATE Items SET name='{0}',price={1} WHERE item_code={2}",itemName,newPrice , id);
 
                 return command.ExecuteNonQuery();
             }
@@ -88,6 +90,21 @@ namespace CaffeeData
                 command.Connection = sqlConnection;
 
                 command.CommandText = string.Format("DELETE FROM Items WHERE item_code={0}",id);
+
+                sqlConnection.Open();
+
+                return command.ExecuteNonQuery();
+            }
+        }
+        public int DeleteItemByName(string name)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
+            {
+                SqlCommand command = new SqlCommand();
+
+                command.Connection = sqlConnection;
+
+                command.CommandText = string.Format("DELETE FROM Items WHERE name = {0}", name);
 
                 sqlConnection.Open();
 

@@ -37,8 +37,6 @@ namespace Caffee
             this.pictureBox_titlebar_logo = new System.Windows.Forms.PictureBox();
             this.button_close = new System.Windows.Forms.Button();
             this.dataGridView_menuItems = new System.Windows.Forms.DataGridView();
-            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonDeleteItem = new System.Windows.Forms.Button();
             this.buttonEditItem = new System.Windows.Forms.Button();
             this.buttonAddItem = new System.Windows.Forms.Button();
@@ -101,6 +99,7 @@ namespace Caffee
             // 
             this.dataGridView_menuItems.AllowUserToAddRows = false;
             this.dataGridView_menuItems.AllowUserToDeleteRows = false;
+            this.dataGridView_menuItems.AllowUserToResizeColumns = false;
             this.dataGridView_menuItems.AllowUserToResizeRows = false;
             this.dataGridView_menuItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_menuItems.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
@@ -114,9 +113,7 @@ namespace Caffee
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView_menuItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_menuItems.ColumnHeadersHeight = 25;
-            this.dataGridView_menuItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ItemName,
-            this.ItemPrice});
+            this.dataGridView_menuItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
@@ -128,6 +125,7 @@ namespace Caffee
             this.dataGridView_menuItems.EnableHeadersVisualStyles = false;
             this.dataGridView_menuItems.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.dataGridView_menuItems.Location = new System.Drawing.Point(12, 46);
+            this.dataGridView_menuItems.MultiSelect = false;
             this.dataGridView_menuItems.Name = "dataGridView_menuItems";
             this.dataGridView_menuItems.ReadOnly = true;
             this.dataGridView_menuItems.RowHeadersVisible = false;
@@ -135,21 +133,6 @@ namespace Caffee
             this.dataGridView_menuItems.ShowCellToolTips = false;
             this.dataGridView_menuItems.Size = new System.Drawing.Size(651, 298);
             this.dataGridView_menuItems.TabIndex = 2;
-            // 
-            // ItemName
-            // 
-            this.ItemName.HeaderText = "Item Name";
-            this.ItemName.Name = "ItemName";
-            this.ItemName.ReadOnly = true;
-            this.ItemName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // ItemPrice
-            // 
-            this.ItemPrice.FillWeight = 20F;
-            this.ItemPrice.HeaderText = "Price";
-            this.ItemPrice.Name = "ItemPrice";
-            this.ItemPrice.ReadOnly = true;
-            this.ItemPrice.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // buttonDeleteItem
             // 
@@ -204,6 +187,7 @@ namespace Caffee
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MenuSettings";
             this.Text = "MenuSettings";
+            this.Load += new System.EventHandler(this.FormLoad);
             this.panel_Header.ResumeLayout(false);
             this.panel_Header.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_titlebar_logo)).EndInit();
@@ -219,8 +203,6 @@ namespace Caffee
         private System.Windows.Forms.PictureBox pictureBox_titlebar_logo;
         private System.Windows.Forms.Button button_close;
         private System.Windows.Forms.DataGridView dataGridView_menuItems;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ItemPrice;
         private System.Windows.Forms.Button buttonAddItem;
         private System.Windows.Forms.Button buttonEditItem;
         private System.Windows.Forms.Button buttonDeleteItem;

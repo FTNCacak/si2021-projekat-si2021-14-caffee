@@ -178,6 +178,7 @@ namespace Caffee
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditItem";
             this.Text = "EditItem";
+            this.Load += new System.EventHandler(this.EditLoad);
             this.panel_Header.ResumeLayout(false);
             this.panel_Header.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_titlebar_logo)).EndInit();

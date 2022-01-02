@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CaffeBusiness;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,31 +13,15 @@ namespace Caffee
 {
     public partial class MenuSettings : Form
     {
+        private readonly ItemBusiness itemBusiness = new ItemBusiness();
         public MenuSettings()
         {
             InitializeComponent();
-            InitializeColumns(); // <--- test funkcija
         }
 
         private void button_close_Click(object sender, EventArgs e)
         {
             this.Dispose();
-        }
-
-        private void InitializeColumns()
-        {
-            //temporary test data for design purpose
-            string[] row = new string[] { "Kokakola 0.33l", "75.00" };
-            dataGridView_menuItems.Rows.Add(row);
-            row = new string[] { "Lav pivo 1l", "100.00" };
-            dataGridView_menuItems.Rows.Add(row);
-            row = new string[] { "Domaca kafa", "50.00" };
-            dataGridView_menuItems.Rows.Add(row);
-            row = new string[] { "Lavita sok", "60.00" };
-            dataGridView_menuItems.Rows.Add(row);
-            row = new string[] { "Kisela voda", "30.00" };
-            dataGridView_menuItems.Rows.Add(row);
-            //temporary test data for design purpose
         }
 
         private void dataGridView_menuItems_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -48,6 +33,7 @@ namespace Caffee
 
         private void buttonDeleteItem_Click(object sender, EventArgs e)
         {
+            int id = Convert.ToInt32(dataGridView_menuItems.SelectedRows[0].Cells[0].Value);
             using (DeleteItemConfirm confirmDelete = new DeleteItemConfirm())
             {
                 confirmDelete.StartPosition = FormStartPosition.Manual;
@@ -56,7 +42,8 @@ namespace Caffee
                 confirmDelete.Location = new Point(dPosX, dposY);
                 if (confirmDelete.ShowDialog()==System.Windows.Forms.DialogResult.OK)
                 {
-                    //obrisati artikal iz baze i iz liste
+                    itemBusiness.deleteItem(id);
+                    RefreshData();
                 }
             }
                        
@@ -72,18 +59,21 @@ namespace Caffee
                 addItem.Location = new Point(dPosX, dposY);
                 if (addItem.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
-                    //refresh list
-                    // ovo je samo test ---> InitializeColumns();
+                    RefreshData();    
                 }
 
-            }
-            
+            }  
             
         }
 
         private void buttonEditItem_Click(object sender, EventArgs e)
         {
-            using (EditItem editItem = new EditItem())
+            string Name = dataGridView_menuItems.SelectedRows[0].Cells[1].Value.ToString();
+            decimal Price = Convert.ToDecimal (dataGridView_menuItems.SelectedRows[0].Cells[2].Value);
+            int id = Convert.ToInt32(dataGridView_menuItems.SelectedRows[0].Cells[0].Value);
+            Console.WriteLine(id);
+            Console.WriteLine("Klasa menu settings "+ id);
+            using (EditItem editItem = new EditItem(Name,Price,id))
             {
                 editItem.StartPosition = FormStartPosition.Manual;
                 int dPosX = (Screen.PrimaryScreen.Bounds.Width / 2) - (editItem.Size.Width / 2);
@@ -91,10 +81,21 @@ namespace Caffee
                 editItem.Location = new Point(dPosX, dposY);
                 if (editItem.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
-                    //refresh list
+                    RefreshData();
                 }
 
             }
+        }
+
+        private void RefreshData()
+        {
+            dataGridView_menuItems.DataSource = itemBusiness.getAllItems();
+   
+        }
+
+        private void FormLoad(object sender, EventArgs e)
+        {
+            RefreshData();
         }
     }
 }
