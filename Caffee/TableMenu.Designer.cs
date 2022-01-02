@@ -33,25 +33,25 @@ namespace Caffee
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TableMenu));
             this.header_Panel = new System.Windows.Forms.Panel();
             this.label_title = new System.Windows.Forms.Label();
-            this.panel_Main = new System.Windows.Forms.Panel();
-            this.label_Total_Price = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox_Article = new System.Windows.Forms.ComboBox();
-            this.label_article = new System.Windows.Forms.Label();
-            this.label_articleQuantity = new System.Windows.Forms.Label();
-            this.numericUpDown_Amount = new System.Windows.Forms.NumericUpDown();
-            this.button_AddToOrder = new System.Windows.Forms.Button();
-            this.button_Charge = new System.Windows.Forms.Button();
             this.pictureBox_titlebar_logo = new System.Windows.Forms.PictureBox();
             this.button_close = new System.Windows.Forms.Button();
+            this.panel_Main = new System.Windows.Forms.Panel();
+            this.button_Charge = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_AddToOrder = new System.Windows.Forms.Button();
+            this.numericUpDown_Amount = new System.Windows.Forms.NumericUpDown();
+            this.label_articleQuantity = new System.Windows.Forms.Label();
+            this.label_article = new System.Windows.Forms.Label();
+            this.comboBox_Article = new System.Windows.Forms.ComboBox();
+            this.label_Total_Price = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.header_Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_titlebar_logo)).BeginInit();
             this.panel_Main.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Amount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_titlebar_logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // header_Panel
@@ -76,137 +76,6 @@ namespace Caffee
             this.label_title.Size = new System.Drawing.Size(63, 20);
             this.label_title.TabIndex = 5;
             this.label_title.Text = "Orders";
-            // 
-            // panel_Main
-            // 
-            this.panel_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(184)))), ((int)(((byte)(146)))));
-            this.panel_Main.Controls.Add(this.button_Charge);
-            this.panel_Main.Controls.Add(this.groupBox1);
-            this.panel_Main.Controls.Add(this.label_Total_Price);
-            this.panel_Main.Controls.Add(this.dataGridView1);
-            this.panel_Main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Main.Location = new System.Drawing.Point(0, 32);
-            this.panel_Main.Name = "panel_Main";
-            this.panel_Main.Size = new System.Drawing.Size(634, 376);
-            this.panel_Main.TabIndex = 1;
-            // 
-            // label_Total_Price
-            // 
-            this.label_Total_Price.AutoSize = true;
-            this.label_Total_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Total_Price.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
-            this.label_Total_Price.Location = new System.Drawing.Point(8, 210);
-            this.label_Total_Price.Name = "label_Total_Price";
-            this.label_Total_Price.Size = new System.Drawing.Size(201, 20);
-            this.label_Total_Price.TabIndex = 1;
-            this.label_Total_Price.Text = "Total price: 736.00 RSD";
-            this.toolTip1.SetToolTip(this.label_Total_Price, "Total price of the order.");
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(610, 186);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.button_AddToOrder);
-            this.groupBox1.Controls.Add(this.numericUpDown_Amount);
-            this.groupBox1.Controls.Add(this.label_articleQuantity);
-            this.groupBox1.Controls.Add(this.label_article);
-            this.groupBox1.Controls.Add(this.comboBox_Article);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
-            this.groupBox1.Location = new System.Drawing.Point(12, 247);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(610, 74);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "ADD NEW ARTICLE TO ORDER";
-            // 
-            // comboBox_Article
-            // 
-            this.comboBox_Article.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
-            this.comboBox_Article.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox_Article.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
-            this.comboBox_Article.FormattingEnabled = true;
-            this.comboBox_Article.Location = new System.Drawing.Point(77, 32);
-            this.comboBox_Article.Name = "comboBox_Article";
-            this.comboBox_Article.Size = new System.Drawing.Size(153, 28);
-            this.comboBox_Article.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.comboBox_Article, "Name of article");
-            // 
-            // label_article
-            // 
-            this.label_article.AutoSize = true;
-            this.label_article.Location = new System.Drawing.Point(6, 35);
-            this.label_article.Name = "label_article";
-            this.label_article.Size = new System.Drawing.Size(65, 20);
-            this.label_article.TabIndex = 1;
-            this.label_article.Text = "Article:";
-            // 
-            // label_articleQuantity
-            // 
-            this.label_articleQuantity.AutoSize = true;
-            this.label_articleQuantity.Location = new System.Drawing.Point(253, 35);
-            this.label_articleQuantity.Name = "label_articleQuantity";
-            this.label_articleQuantity.Size = new System.Drawing.Size(76, 20);
-            this.label_articleQuantity.TabIndex = 2;
-            this.label_articleQuantity.Text = "Amount:";
-            // 
-            // numericUpDown_Amount
-            // 
-            this.numericUpDown_Amount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
-            this.numericUpDown_Amount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
-            this.numericUpDown_Amount.Location = new System.Drawing.Point(335, 33);
-            this.numericUpDown_Amount.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown_Amount.Name = "numericUpDown_Amount";
-            this.numericUpDown_Amount.Size = new System.Drawing.Size(67, 26);
-            this.numericUpDown_Amount.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.numericUpDown_Amount, "Quantity of article");
-            this.numericUpDown_Amount.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // button_AddToOrder
-            // 
-            this.button_AddToOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(102)))), ((int)(((byte)(68)))));
-            this.button_AddToOrder.FlatAppearance.BorderSize = 0;
-            this.button_AddToOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_AddToOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
-            this.button_AddToOrder.Location = new System.Drawing.Point(429, 28);
-            this.button_AddToOrder.Name = "button_AddToOrder";
-            this.button_AddToOrder.Size = new System.Drawing.Size(170, 35);
-            this.button_AddToOrder.TabIndex = 4;
-            this.button_AddToOrder.Text = "ADD TO ORDER";
-            this.toolTip1.SetToolTip(this.button_AddToOrder, "Add item to order list.");
-            this.button_AddToOrder.UseVisualStyleBackColor = false;
-            // 
-            // button_Charge
-            // 
-            this.button_Charge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(102)))), ((int)(((byte)(68)))));
-            this.button_Charge.FlatAppearance.BorderSize = 0;
-            this.button_Charge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Charge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Charge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
-            this.button_Charge.Location = new System.Drawing.Point(441, 329);
-            this.button_Charge.Name = "button_Charge";
-            this.button_Charge.Size = new System.Drawing.Size(170, 35);
-            this.button_Charge.TabIndex = 5;
-            this.button_Charge.Text = "CHARGE";
-            this.toolTip1.SetToolTip(this.button_Charge, "Bill customers.");
-            this.button_Charge.UseVisualStyleBackColor = false;
             // 
             // pictureBox_titlebar_logo
             // 
@@ -236,6 +105,138 @@ namespace Caffee
             this.button_close.UseVisualStyleBackColor = true;
             this.button_close.Click += new System.EventHandler(this.button_close_Click);
             // 
+            // panel_Main
+            // 
+            this.panel_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(184)))), ((int)(((byte)(146)))));
+            this.panel_Main.Controls.Add(this.button_Charge);
+            this.panel_Main.Controls.Add(this.groupBox1);
+            this.panel_Main.Controls.Add(this.label_Total_Price);
+            this.panel_Main.Controls.Add(this.dataGridView1);
+            this.panel_Main.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_Main.Location = new System.Drawing.Point(0, 32);
+            this.panel_Main.Name = "panel_Main";
+            this.panel_Main.Size = new System.Drawing.Size(634, 376);
+            this.panel_Main.TabIndex = 1;
+            // 
+            // button_Charge
+            // 
+            this.button_Charge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(102)))), ((int)(((byte)(68)))));
+            this.button_Charge.FlatAppearance.BorderSize = 0;
+            this.button_Charge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Charge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Charge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
+            this.button_Charge.Location = new System.Drawing.Point(441, 329);
+            this.button_Charge.Name = "button_Charge";
+            this.button_Charge.Size = new System.Drawing.Size(170, 35);
+            this.button_Charge.TabIndex = 5;
+            this.button_Charge.Text = "CHARGE";
+            this.toolTip1.SetToolTip(this.button_Charge, "Bill customers.");
+            this.button_Charge.UseVisualStyleBackColor = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button_AddToOrder);
+            this.groupBox1.Controls.Add(this.numericUpDown_Amount);
+            this.groupBox1.Controls.Add(this.label_articleQuantity);
+            this.groupBox1.Controls.Add(this.label_article);
+            this.groupBox1.Controls.Add(this.comboBox_Article);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
+            this.groupBox1.Location = new System.Drawing.Point(12, 247);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(610, 74);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "ADD NEW ARTICLE TO ORDER";
+            // 
+            // button_AddToOrder
+            // 
+            this.button_AddToOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(102)))), ((int)(((byte)(68)))));
+            this.button_AddToOrder.FlatAppearance.BorderSize = 0;
+            this.button_AddToOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_AddToOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
+            this.button_AddToOrder.Location = new System.Drawing.Point(429, 28);
+            this.button_AddToOrder.Name = "button_AddToOrder";
+            this.button_AddToOrder.Size = new System.Drawing.Size(170, 35);
+            this.button_AddToOrder.TabIndex = 4;
+            this.button_AddToOrder.Text = "ADD TO ORDER";
+            this.toolTip1.SetToolTip(this.button_AddToOrder, "Add item to order list.");
+            this.button_AddToOrder.UseVisualStyleBackColor = false;
+            this.button_AddToOrder.Click += new System.EventHandler(this.button_AddToOrder_Click);
+            // 
+            // numericUpDown_Amount
+            // 
+            this.numericUpDown_Amount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
+            this.numericUpDown_Amount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
+            this.numericUpDown_Amount.Location = new System.Drawing.Point(335, 33);
+            this.numericUpDown_Amount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown_Amount.Name = "numericUpDown_Amount";
+            this.numericUpDown_Amount.Size = new System.Drawing.Size(67, 26);
+            this.numericUpDown_Amount.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.numericUpDown_Amount, "Quantity of article");
+            this.numericUpDown_Amount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label_articleQuantity
+            // 
+            this.label_articleQuantity.AutoSize = true;
+            this.label_articleQuantity.Location = new System.Drawing.Point(253, 35);
+            this.label_articleQuantity.Name = "label_articleQuantity";
+            this.label_articleQuantity.Size = new System.Drawing.Size(76, 20);
+            this.label_articleQuantity.TabIndex = 2;
+            this.label_articleQuantity.Text = "Amount:";
+            // 
+            // label_article
+            // 
+            this.label_article.AutoSize = true;
+            this.label_article.Location = new System.Drawing.Point(6, 35);
+            this.label_article.Name = "label_article";
+            this.label_article.Size = new System.Drawing.Size(65, 20);
+            this.label_article.TabIndex = 1;
+            this.label_article.Text = "Article:";
+            // 
+            // comboBox_Article
+            // 
+            this.comboBox_Article.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
+            this.comboBox_Article.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox_Article.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
+            this.comboBox_Article.FormattingEnabled = true;
+            this.comboBox_Article.Location = new System.Drawing.Point(77, 32);
+            this.comboBox_Article.Name = "comboBox_Article";
+            this.comboBox_Article.Size = new System.Drawing.Size(153, 28);
+            this.comboBox_Article.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.comboBox_Article, "Name of article");
+            // 
+            // label_Total_Price
+            // 
+            this.label_Total_Price.AutoSize = true;
+            this.label_Total_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Total_Price.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
+            this.label_Total_Price.Location = new System.Drawing.Point(8, 210);
+            this.label_Total_Price.Name = "label_Total_Price";
+            this.label_Total_Price.Size = new System.Drawing.Size(201, 20);
+            this.label_Total_Price.TabIndex = 1;
+            this.label_Total_Price.Text = "Total price: 736.00 RSD";
+            this.toolTip1.SetToolTip(this.label_Total_Price, "Total price of the order.");
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(610, 186);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // TableMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,13 +250,13 @@ namespace Caffee
             this.Load += new System.EventHandler(this.TableMenu_Load);
             this.header_Panel.ResumeLayout(false);
             this.header_Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_titlebar_logo)).EndInit();
             this.panel_Main.ResumeLayout(false);
             this.panel_Main.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Amount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_titlebar_logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
