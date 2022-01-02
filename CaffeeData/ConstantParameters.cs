@@ -8,6 +8,7 @@ namespace CaffeeData
 {
     public class ConstantParameters
     {
-        public string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=CaffeeDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        //public string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=CaffeeDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        public string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=CafeeDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
     }
 }

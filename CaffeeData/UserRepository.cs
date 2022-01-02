@@ -35,7 +35,11 @@ namespace CaffeeData
 
         public void InsertNewUser(User u)
         {
-            string filePath = @"C:\Users\Bane\Desktop\ProjekatSi\si2021-projekat-si2021-14-caffee\CaffeeData\Users.txt";
+            //Banov flie path
+            //string filePath = @"C:\Users\Bane\Desktop\ProjekatSi\si2021-projekat-si2021-14-caffee\CaffeeData\Users.txt";
+
+            //Pajov file path
+            string filePath = @"C:\\Users\\pajo\\source\\repos\\si2021-projekat-si2021-14-caffee\\CaffeeData\\Users.txt";
 
             List<User> users = GetAllUsers();
 

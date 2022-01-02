@@ -57,7 +57,7 @@ namespace CaffeeData
                 command.Connection = sqlConnection;
 
                 command.CommandText = string.Format("INSERT INTO Tables VALUES({0}, {1}, {2})",
-                    t.Occupied,t.position_w,t.position_h);
+                   ocupied_check(t.Occupied),t.position_w,t.position_h);
 
                 sqlConnection.Open();
 
@@ -69,6 +69,8 @@ namespace CaffeeData
         {
             using (SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
             {
+                sqlConnection.Open();
+
                 SqlCommand command = new SqlCommand();
 
                 command.Connection = sqlConnection;
@@ -84,12 +86,14 @@ namespace CaffeeData
         {
             using (SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
             {
+                sqlConnection.Open();
+
                 SqlCommand command = new SqlCommand();
 
                 command.Connection = sqlConnection;
 
                 command.CommandText = string.Format("UPDATE Tables SET occupied = {0} WHERE table_number = {1}",
-                    !occupied, table_num);
+                    ocupied_check(!occupied), table_num);
 
                 return command.ExecuteNonQuery();
             }
@@ -99,6 +103,8 @@ namespace CaffeeData
         {
             using(SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
             {
+                sqlConnection.Open();
+
                 SqlCommand command = new SqlCommand();
 
                 command.Connection = sqlConnection;
@@ -113,6 +119,8 @@ namespace CaffeeData
         {
             using (SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
             {
+                sqlConnection.Open();
+
                 SqlCommand command = new SqlCommand();
                 
                 command.Connection = sqlConnection;
@@ -122,5 +130,35 @@ namespace CaffeeData
                 return command.ExecuteNonQuery();
             }
         }
+        //public int GetLatestId()
+        //{
+        //    using (SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
+        //    {
+        //        SqlCommand command = new SqlCommand();
+
+        //        command.Connection = sqlConnection;
+
+        //        command.CommandText = string.Format("SELECT MAX(table_number) FROM Tables");
+
+        //        sqlConnection.Open();
+
+        //        SqlDataReader dataReader = command.ExecuteReader();
+        //        if (dataReader.Read())
+        //        {
+        //            latestId = dataReader.GetInt32(0);
+        //        }
+        //        return latestId;
+
+        //    }
+        //}
+       
+        public int ocupied_check(bool check)
+        {
+            if (check)
+                return 1;
+            else 
+                return 0;
+        }
+        
     }
 }
