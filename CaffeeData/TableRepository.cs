@@ -100,9 +100,12 @@ namespace CaffeeData
             using(SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
             {
                 SqlCommand command = new SqlCommand();
+
                 command.Connection = sqlConnection;
+                
                 command.CommandText = string.Format("DELETE FROM Tables WHERE table_number = {0}", 
                     tableNum);
+                
                 return command.ExecuteNonQuery();
             }
         }
@@ -111,8 +114,11 @@ namespace CaffeeData
             using (SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
             {
                 SqlCommand command = new SqlCommand();
+                
                 command.Connection = sqlConnection;
+                
                 command.CommandText = string.Format("ALTER Tables table_number AUTO_INCREMENT");
+                
                 return command.ExecuteNonQuery();
             }
         }
