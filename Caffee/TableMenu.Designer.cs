@@ -44,14 +44,14 @@ namespace Caffee
             this.label_article = new System.Windows.Forms.Label();
             this.comboBox_Article = new System.Windows.Forms.ComboBox();
             this.label_Total_Price = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewOrders = new System.Windows.Forms.DataGridView();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.header_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_titlebar_logo)).BeginInit();
             this.panel_Main.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Amount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrders)).BeginInit();
             this.SuspendLayout();
             // 
             // header_Panel
@@ -111,7 +111,7 @@ namespace Caffee
             this.panel_Main.Controls.Add(this.button_Charge);
             this.panel_Main.Controls.Add(this.groupBox1);
             this.panel_Main.Controls.Add(this.label_Total_Price);
-            this.panel_Main.Controls.Add(this.dataGridView1);
+            this.panel_Main.Controls.Add(this.dataGridViewOrders);
             this.panel_Main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Main.Location = new System.Drawing.Point(0, 32);
             this.panel_Main.Name = "panel_Main";
@@ -226,16 +226,16 @@ namespace Caffee
             this.label_Total_Price.Text = "Total price: 736.00 RSD";
             this.toolTip1.SetToolTip(this.label_Total_Price, "Total price of the order.");
             // 
-            // dataGridView1
+            // dataGridViewOrders
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(610, 186);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewOrders.AllowUserToOrderColumns = true;
+            this.dataGridViewOrders.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
+            this.dataGridViewOrders.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewOrders.Location = new System.Drawing.Point(12, 12);
+            this.dataGridViewOrders.Name = "dataGridViewOrders";
+            this.dataGridViewOrders.Size = new System.Drawing.Size(610, 186);
+            this.dataGridViewOrders.TabIndex = 0;
             // 
             // TableMenu
             // 
@@ -256,7 +256,7 @@ namespace Caffee
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Amount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrders)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -268,7 +268,7 @@ namespace Caffee
         private System.Windows.Forms.PictureBox pictureBox_titlebar_logo;
         private System.Windows.Forms.Label label_title;
         private System.Windows.Forms.Panel panel_Main;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewOrders;
         private System.Windows.Forms.Label label_Total_Price;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button_AddToOrder;

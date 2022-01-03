@@ -27,7 +27,7 @@ namespace Caffee
 
         private void buttonAddItem_Click(object sender, EventArgs e)
         {
-            Item item = new Item();
+            Item item = new Item(); 
             item.Name = textBoxItemName.Text;
             item.Price = decimal.Parse(textBoxItemPrice.Text);
             itemBusiness.insertItem(item);

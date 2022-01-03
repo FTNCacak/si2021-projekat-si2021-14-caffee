@@ -11,6 +11,16 @@ namespace CaffeeData.Models
         public int Id { get; set; }
 
         public int BillNumber { get; set; }
+        public Order(int billNumber)
+        {
+            BillNumber = billNumber;
+
+            List<OrderItem> orderItems = new List<OrderItem>();
+        }
+        public Order()
+        {
+
+        }
 
     }
 }

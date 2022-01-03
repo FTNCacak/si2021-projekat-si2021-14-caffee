@@ -14,7 +14,20 @@ namespace CaffeeData.Models
 
         public int ItemId { get; set; }
 
-        public int OrderId { get; set; }
+        public int BillId { get; set; }
+
+        public OrderItem(int BillId, int itemId, int itemQuantity)
+        {
+            this.ItemQuantity = itemQuantity;
+
+            this.ItemId = itemId;
+
+            this.BillId = this.BillId;
+        }
+        public OrderItem()
+        {
+
+        }
 
     }
 }

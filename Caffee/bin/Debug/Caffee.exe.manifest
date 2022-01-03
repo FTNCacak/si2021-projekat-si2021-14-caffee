@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CaffeBusiness.dll" size="6144">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CaffeBusiness.dll" size="6656">
       <assemblyIdentity name="CaffeBusiness" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xGH3Uj0Ba6CEBCVF/tQ562rn+oCW6Al0mGoXXVZHpAk=</dsig:DigestValue>
+        <dsig:DigestValue>mwkrRQHZ5bKkRyAkr0Q+nx7uSXdgx4mCYpLT81dR2Z0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,7 +61,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>WEy5I+/Ux/sKuyP2pZf50d3xI5tEnbmC2f4+NiEPGzo=</dsig:DigestValue>
+        <dsig:DigestValue>jsnrbarzbV7W8cC3LfBI6JhE1yvAdwUDZqrq48nsWmk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -73,7 +73,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>vGsp7ftxhq0sv3isUhAOfk5TACqEAD80a1ssAYP71z0=</dsig:DigestValue>
+        <dsig:DigestValue>+6yO1MfABc21STXM/8CHR/vlhCK9GMbGZ2XLiCj1WWQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

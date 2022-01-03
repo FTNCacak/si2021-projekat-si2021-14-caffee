@@ -32,5 +32,13 @@ namespace CaffeBusiness
         {
             return itemRepository.DeleteItem(id) != 0;      
         }
+        public int GetIdOfItemName(string itemName)
+        {
+            return itemRepository.GetIdOfNameItem(itemName);
+        }
+        public decimal GetPriceOfItem(string itemName)
+        {
+            return itemRepository.GetPriceOfItemByName(itemName);
+        }
     }
 }
