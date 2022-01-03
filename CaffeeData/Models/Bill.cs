@@ -14,13 +14,15 @@ namespace CaffeeData.Models
 
         public int TableId { get; set; }
 
+        public List<OrderItem> Orderitems { get; }
+
         public Bill(int tableId)
         {
             DateOfIssue = DateTime.Now;
 
             TableId = tableId;
 
-            List<OrderItem> orderitems = new List<OrderItem>();
+            Orderitems = new List<OrderItem>();
         }
         public Bill() { }
     }

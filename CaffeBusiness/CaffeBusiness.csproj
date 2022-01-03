@@ -46,7 +46,6 @@
   <ItemGroup>
     <Compile Include="BillBusiness.cs" />
     <Compile Include="ItemBusiness.cs" />
-    <Compile Include="OrderBsiness.cs" />
     <Compile Include="OrderItemBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TableBusiness.cs" />

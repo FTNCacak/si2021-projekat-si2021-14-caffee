@@ -39,7 +39,7 @@ namespace CaffeeData
             //string filePath = @"C:\Users\Bane\Desktop\ProjekatSi\si2021-projekat-si2021-14-caffee\CaffeeData\Users.txt";
 
             //Pajov file path
-            string filePath = @"C:\\Users\\pajo\\source\\repos\\si2021-projekat-si2021-14-caffee\\CaffeeData\\Users.txt";
+            string filePath = @"~\\si2021-projekat-si2021-14-caffee\\CaffeeData\\Users.txt";
 
             List<User> users = GetAllUsers();
 
@@ -55,6 +55,33 @@ namespace CaffeeData
             File.WriteAllText(filePath, "");
 
             File.WriteAllLines(filePath, outContents);
+        }
+
+        public void InsertNewOwner(Owner owner)
+        {
+            public void InsertNewUser(User u)
+            {
+                //Banov flie path
+                //string filePath = @"C:\Users\Bane\Desktop\ProjekatSi\si2021-projekat-si2021-14-caffee\CaffeeData\Users.txt";
+
+                //Pajov file path
+                string filePath = @"~\\si2021-projekat-si2021-14-caffee\\CaffeeData\\Users.txt";
+
+                List<User> users = GetAllUsers();
+
+                users.Add(u);
+
+                List<string> outContents = new List<string>();
+
+                foreach (User user in users)
+                {
+                    outContents.Add(user.ToString());
+                }
+
+                File.WriteAllText(filePath, "");
+
+                File.WriteAllLines(filePath, outContents);
+            }
         }
 
     }

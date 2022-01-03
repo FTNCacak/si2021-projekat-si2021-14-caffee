@@ -82,6 +82,7 @@ namespace CaffeeData
             }
         }
 
+        //prosledjuje se trenutna vrednost occupied u programu
         public int ChangeOccupancy(int table_num, bool occupied)
         {
             using (SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
