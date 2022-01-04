@@ -151,8 +151,8 @@ namespace Caffee
             tableToolTip.SetToolTip(tb, "Drag to move.\nRight-click to remove.");
             panelFloor.Controls.Add(tb);
 
-            string path = @"C:\Users\pajo\Desktop\Astali\"+"Sto"+tableBusiness.getAllTables().Last().Id+".txt";
-
+            string path = Constants.GetPath() + "Sto" + tableBusiness.getAllTables().Last().Id+".txt";
+            
             using (FileStream fs = File.Create(path)) ;
 
             Console.WriteLine(tableBusiness.getAllTables().Last().Id);

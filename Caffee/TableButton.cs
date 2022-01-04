@@ -70,8 +70,9 @@ namespace Caffee
             
             if(e.Button == MouseButtons.Right)
             {
+                
                 tableBusiness.deleteTable(id);
-                File.Delete(@"C:\Users\pajo\Desktop\Astali\" + "Sto" + this.id + ".txt");
+                File.Delete(Constants.GetPath() + "Sto" + this.id + ".txt");
                 Console.WriteLine(this.id+" Table Button");
                 this.Dispose();
             }

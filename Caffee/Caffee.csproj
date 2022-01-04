@@ -90,6 +90,7 @@
     <Compile Include="ChooseWindow.Designer.cs">
       <DependentUpon>ChooseWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Constants.cs" />
     <Compile Include="CreateOwnerAccount.cs">
       <SubType>Form</SubType>
     </Compile>

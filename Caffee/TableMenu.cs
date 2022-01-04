@@ -37,7 +37,7 @@ namespace Caffee
                 comboBox_Article.Items.Add(item.Name);
             }
             List<string> all = new List<string>();
-            all = File.ReadAllLines(@"C:\Users\pajo\Desktop\Astali\" + "Sto" + this.idTable + ".txt").ToList();
+            all = File.ReadAllLines(Constants.GetPath() + "Sto" + this.idTable + ".txt").ToList();
 
             foreach (string item in all)
             {
@@ -60,7 +60,7 @@ namespace Caffee
             numericUpDown_Amount.Value = 1;
             comboBox_Article.SelectedIndex = -1;
 
-            using (StreamWriter streamWriter = new StreamWriter(@"C:\Users\pajo\Desktop\Astali\" + "Sto" + this.idTable + ".txt", append: true))
+            using (StreamWriter streamWriter = new StreamWriter(Constants.GetPath() + "Sto" + this.idTable + ".txt", append: true))
             {
                 streamWriter.WriteLine(comboItem + "+" + ammount);
             }
@@ -118,21 +118,28 @@ namespace Caffee
                 oi.BillId = billId;
                 orderItemBusiness.insertOrderItem(oi);
             }
+            dataGridViewOrders.Rows.Clear();
+
+            File.WriteAllText(Constants.GetPath() + "Sto" + this.idTable+".txt","");
+            
         }
         private List<OrderItem> GetOrderItemsFromFile(int tableId)
         {
             List<OrderItem> orderItems = new List<OrderItem>();
 
             List<string> all = new List<string>();
-            all = File.ReadAllLines(@"C:\Users\pajo\Desktop\Astali\" + "Sto" + this.idTable + ".txt").ToList();
+            all = File.ReadAllLines(Constants.GetPath() + "Sto" + this.idTable + ".txt").ToList();
 
             foreach (string item in all)
             {
                 string[] items = item.Split('+');
+                Console.WriteLine("Item name:{0} item quantity:{1}",items[0],items[1]);
                 OrderItem oi = new OrderItem();
-                oi.ItemId = this.itemBusiness.GetIdOfItemName(Convert.ToString(item[0]));
-                oi.ItemQuantity = Convert.ToInt32(item[1]);
+
+                oi.ItemId = itemBusiness.GetIdOfItemName(items[0]);
+                oi.ItemQuantity = Convert.ToInt32(items[1]);
                 Console.WriteLine(oi.ItemId + " " + oi.ItemQuantity);
+                orderItems.Add(oi);
             }
 
             return orderItems;
