@@ -59,8 +59,7 @@ namespace CaffeeData
 
         public void InsertNewOwner(Owner owner)
         {
-            public void InsertNewUser(User u)
-            {
+          
                 //Banov flie path
                 //string filePath = @"C:\Users\Bane\Desktop\ProjekatSi\si2021-projekat-si2021-14-caffee\CaffeeData\Users.txt";
 
@@ -69,7 +68,7 @@ namespace CaffeeData
 
                 List<User> users = GetAllUsers();
 
-                users.Add(u);
+                users.Add(owner);
 
                 List<string> outContents = new List<string>();
 
@@ -81,7 +80,7 @@ namespace CaffeeData
                 File.WriteAllText(filePath, "");
 
                 File.WriteAllLines(filePath, outContents);
-            }
+            
         }
 
     }

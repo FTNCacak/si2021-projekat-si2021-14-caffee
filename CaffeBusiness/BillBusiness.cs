@@ -11,7 +11,7 @@ namespace CaffeBusiness
     {
         //instance of BillRepository that allows us to access methods of data layer
         private readonly BillRepository billRepository = new BillRepository();
-
+        private readonly OrderItemRepository orderItemRepository = new OrderItemRepository();
         //method that calls GetAllBills from billRepository class and returns list of all bills
         public List<Bill> getAllBills()
         {
@@ -22,6 +22,10 @@ namespace CaffeBusiness
         public bool insertBill(Bill b)
         {
             return billRepository.InsertBill(b) != 0;
+        }
+        public bool deleteBill(int b)
+        {
+            return billRepository.DeleteBill(b) != 0;
         }
     }
 }

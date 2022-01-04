@@ -9,11 +9,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+
 namespace Caffee
 {
     public partial class MainWindow : Form
     {
-        private readonly BillBusiness billBusiness = new BillBusiness();
         private readonly TableBusiness tableBusiness = new TableBusiness();
 
         ToolTip tableToolTip = new ToolTip();
@@ -48,6 +49,7 @@ namespace Caffee
                     TableButton tb = new TableButton();
                     tb.id = table.Id;
                     tb.Location = new Point(table.position_w, table.position_h);
+
                     tableToolTip.SetToolTip(tb, "Drag to move.\nRight-click to remove.");
                     panelFloor.Controls.Add(tb);
                     
@@ -149,10 +151,16 @@ namespace Caffee
             tableToolTip.SetToolTip(tb, "Drag to move.\nRight-click to remove.");
             panelFloor.Controls.Add(tb);
 
+            string path = @"C:\Users\pajo\Desktop\Astali\"+"Sto"+tableBusiness.getAllTables().Last().Id+".txt";
+
+            using (FileStream fs = File.Create(path)) ;
+
+            Console.WriteLine(tableBusiness.getAllTables().Last().Id);
         }
 
         private void button_menu_Click(object sender, EventArgs e)
         {
+            
             MenuSettings ms = new MenuSettings();
             ms.StartPosition = FormStartPosition.Manual;
             int dPosX = (Screen.PrimaryScreen.Bounds.Width / 2) - (ms.Size.Width / 2);

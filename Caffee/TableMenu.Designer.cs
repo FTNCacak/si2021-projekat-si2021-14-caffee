@@ -125,13 +125,14 @@ namespace Caffee
             this.button_Charge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Charge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Charge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
-            this.button_Charge.Location = new System.Drawing.Point(441, 329);
+            this.button_Charge.Location = new System.Drawing.Point(441, 327);
             this.button_Charge.Name = "button_Charge";
             this.button_Charge.Size = new System.Drawing.Size(170, 35);
             this.button_Charge.TabIndex = 5;
             this.button_Charge.Text = "CHARGE";
             this.toolTip1.SetToolTip(this.button_Charge, "Bill customers.");
             this.button_Charge.UseVisualStyleBackColor = false;
+            this.button_Charge.Click += new System.EventHandler(this.button_Charge_Click);
             // 
             // groupBox1
             // 
@@ -228,12 +229,14 @@ namespace Caffee
             // 
             // dataGridViewOrders
             // 
-            this.dataGridViewOrders.AllowUserToOrderColumns = true;
+            this.dataGridViewOrders.AllowUserToAddRows = false;
+            this.dataGridViewOrders.AllowUserToDeleteRows = false;
             this.dataGridViewOrders.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
             this.dataGridViewOrders.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewOrders.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewOrders.Name = "dataGridViewOrders";
+            this.dataGridViewOrders.ReadOnly = true;
             this.dataGridViewOrders.Size = new System.Drawing.Size(610, 186);
             this.dataGridViewOrders.TabIndex = 0;
             // 

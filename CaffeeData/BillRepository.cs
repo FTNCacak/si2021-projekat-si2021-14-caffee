@@ -63,6 +63,21 @@ namespace CaffeeData
                 return command.ExecuteNonQuery();
             }
         }
+        public int DeleteBill(int billId)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
+            {
+                SqlCommand command = new SqlCommand();
+
+                command.Connection = sqlConnection;
+
+                command.CommandText = string.Format("DELETE FROM Bills WHERE bill_number = {0}",billId);
+
+                sqlConnection.Open();
+
+                return command.ExecuteNonQuery();
+            }
+        }
 
     }
 }

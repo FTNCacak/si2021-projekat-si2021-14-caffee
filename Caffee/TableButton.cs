@@ -9,6 +9,7 @@ using System.Diagnostics;
 using CaffeBusiness;
 using CaffeeData.Models;
 using CaffeeData;
+using System.IO;
 namespace Caffee
 {
     class TableButton : Button
@@ -18,10 +19,8 @@ namespace Caffee
         private int posXEnd;
         private int posYEnd;
         public int id;
-        public int billNubmer;
-
-        private readonly TableBusiness tableBusiness = new TableBusiness();
-        private readonly BillBusiness billBusiness = new BillBusiness();
+        private readonly TableBusiness tableBusiness = new TableBusiness();  
+        
         public TableButton()
         {
             int table_dimension = (int)(120 * Screen.PrimaryScreen.Bounds.Height) / 768;
@@ -38,13 +37,9 @@ namespace Caffee
             this.MouseUp += button1_MouseUp;
             ControlExtension.Draggable(this, true);                  
         }
-
         public void ShowOrders()
         {
-            Bill bill = new Bill();
-            billBusiness.insertBill(bill);
-            billNubmer = billBusiness.getAllBills().Last().Id;
-            TableMenu tm = new TableMenu(id,billNubmer);
+            TableMenu tm = new TableMenu(id);
             tm.StartPosition = FormStartPosition.Manual;
             int dPosX = (Screen.PrimaryScreen.Bounds.Width / 2) - (tm.Size.Width / 2);
             int dPosY = (Screen.PrimaryScreen.Bounds.Height / 2) - (tm.Size.Height / 2);
@@ -76,6 +71,8 @@ namespace Caffee
             if(e.Button == MouseButtons.Right)
             {
                 tableBusiness.deleteTable(id);
+                File.Delete(@"C:\Users\pajo\Desktop\Astali\" + "Sto" + this.id + ".txt");
+                Console.WriteLine(this.id+" Table Button");
                 this.Dispose();
             }
             

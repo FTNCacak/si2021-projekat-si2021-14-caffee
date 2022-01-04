@@ -56,7 +56,7 @@ namespace CaffeeData
 
                 command.Connection = sqlConnection;
 
-                command.CommandText = string.Format("INSERT INTO OrderItems VALUES({0},{1},{2})",
+                command.CommandText = string.Format("INSERT INTO Order_Items VALUES({0},{1},{2})",
                     orderItem.ItemQuantity,orderItem.ItemId,orderItem.BillId);
 
                 sqlConnection.Open();
