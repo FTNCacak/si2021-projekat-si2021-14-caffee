@@ -168,5 +168,12 @@ namespace Caffee
             ms.Location = new Point(dPosX, dposY);
             ms.ShowDialog(); //ShowDialog()se gasi sa Dispose()               
         }
+
+        private void button_logout_Click(object sender, EventArgs e)
+        {
+            Login lg = new Login();
+            lg.Show();
+            //this.Dispose();
+        }
     }
 }

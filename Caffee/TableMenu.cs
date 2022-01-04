@@ -16,22 +16,22 @@ namespace Caffee
     public partial class TableMenu : Form
     {
         private readonly ItemBusiness itemBusiness = new ItemBusiness();
-        private readonly BillBusiness billBusiness = new BillBusiness();    
+        private readonly BillBusiness billBusiness = new BillBusiness();
         private readonly OrderItemBusiness orderItemBusiness = new OrderItemBusiness();
-        private readonly TableBusiness tableBusiness = new TableBusiness(); 
+        private readonly TableBusiness tableBusiness = new TableBusiness();
         private int idTable;
         public TableMenu(int idTable)
         {
-            this.idTable = idTable; 
+            this.idTable = idTable;
             InitializeComponent();
-              
+
         }
 
         private void TableMenu_Load(object sender, EventArgs e)
         {
             dataGridViewOrders.ColumnCount = 2;
             dataGridViewOrders.Columns[0].Name = "Item name";
-            dataGridViewOrders.Columns[1].Name = "Ammount"; 
+            dataGridViewOrders.Columns[1].Name = "Ammount";
             foreach (Item item in itemBusiness.getAllItems())
             {
                 comboBox_Article.Items.Add(item.Name);
@@ -44,7 +44,7 @@ namespace Caffee
                 string[] items = item.Split('+');
                 dataGridViewOrders.Rows.Add(items[0], items[1]);
             }
-            
+
         }
 
         private void button_close_Click(object sender, EventArgs e)
@@ -54,18 +54,18 @@ namespace Caffee
 
         private void button_AddToOrder_Click(object sender, EventArgs e)
         {
-            
-            string comboItem=comboBox_Article.Text; 
+
+            string comboItem = comboBox_Article.Text;
             int ammount = Convert.ToInt32(numericUpDown_Amount.Value);
             numericUpDown_Amount.Value = 1;
             comboBox_Article.SelectedIndex = -1;
-            
-            using(StreamWriter streamWriter = new StreamWriter(@"C:\Users\pajo\Desktop\Astali\" + "Sto" + this.idTable + ".txt",append:true))
+
+            using (StreamWriter streamWriter = new StreamWriter(@"C:\Users\pajo\Desktop\Astali\" + "Sto" + this.idTable + ".txt", append: true))
             {
-                streamWriter.WriteLine(comboItem+"+"+ammount);
+                streamWriter.WriteLine(comboItem + "+" + ammount);
             }
-            dataGridViewOrders.Rows.Add(comboItem,ammount);
-            
+            dataGridViewOrders.Rows.Add(comboItem, ammount);
+
 
             //bool occupied = false;
 
@@ -105,7 +105,38 @@ namespace Caffee
 
         private void button_Charge_Click(object sender, EventArgs e)
         {
-            
+            Bill b = new Bill(idTable);
+
+            List<OrderItem> orderItems = GetOrderItemsFromFile(idTable);
+
+            billBusiness.insertBill(b);
+
+            int billId = this.billBusiness.getAllBills().Last().Id;
+
+            foreach (OrderItem oi in orderItems)
+            {
+                oi.BillId = billId;
+                orderItemBusiness.insertOrderItem(oi);
+            }
         }
+        private List<OrderItem> GetOrderItemsFromFile(int tableId)
+        {
+            List<OrderItem> orderItems = new List<OrderItem>();
+
+            List<string> all = new List<string>();
+            all = File.ReadAllLines(@"C:\Users\pajo\Desktop\Astali\" + "Sto" + this.idTable + ".txt").ToList();
+
+            foreach (string item in all)
+            {
+                string[] items = item.Split('+');
+                OrderItem oi = new OrderItem();
+                oi.ItemId = this.itemBusiness.GetIdOfItemName(Convert.ToString(item[0]));
+                oi.ItemQuantity = Convert.ToInt32(item[1]);
+                Console.WriteLine(oi.ItemId + " " + oi.ItemQuantity);
+            }
+
+            return orderItems;
+        }
+
     }
 }

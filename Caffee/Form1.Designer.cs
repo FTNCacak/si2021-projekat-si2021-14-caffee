@@ -174,6 +174,7 @@ namespace Caffee
             this.button_logout.Text = "LOG OUT";
             this.button_logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_logout.UseVisualStyleBackColor = true;
+            this.button_logout.Click += new System.EventHandler(this.button_logout_Click);
             // 
             // button_dailyRecap
             // 
