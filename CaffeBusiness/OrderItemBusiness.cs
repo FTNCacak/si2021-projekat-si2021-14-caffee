@@ -24,5 +24,11 @@ namespace CaffeBusiness
         {
             return orderItemRepository.InsertOrderItem(o) != 0;
         }
+        
+        public bool DeleteOrderItemsWhereId(int billId)
+        {
+            return orderItemRepository.DeleteOrderItemsWhereId(billId) != 0;
+        }
+
     }
 }

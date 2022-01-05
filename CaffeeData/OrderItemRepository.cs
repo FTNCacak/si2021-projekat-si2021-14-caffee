@@ -100,5 +100,21 @@ namespace CaffeeData
             }
         }
 
+        public int DeleteOrderItemsWhereId(int billId)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
+            {
+                SqlCommand command = new SqlCommand();
+
+                command.Connection = sqlConnection;
+
+                command.CommandText = string.Format("DELETE FROM Order_Items WHERE Bill_ID={0}", billId);
+
+                sqlConnection.Open();
+
+                return command.ExecuteNonQuery();
+            }
+        }
+
     }
 }

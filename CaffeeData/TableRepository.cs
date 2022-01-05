@@ -94,7 +94,7 @@ namespace CaffeeData
                 command.Connection = sqlConnection;
 
                 command.CommandText = string.Format("UPDATE Tables SET occupied = {0} WHERE table_number = {1}",
-                    ocupied_check(!occupied), table_num);
+                    ocupied_check(occupied), table_num);
 
                 return command.ExecuteNonQuery();
             }

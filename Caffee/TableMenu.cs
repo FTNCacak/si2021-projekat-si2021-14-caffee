@@ -19,7 +19,10 @@ namespace Caffee
         private readonly BillBusiness billBusiness = new BillBusiness();
         private readonly OrderItemBusiness orderItemBusiness = new OrderItemBusiness();
         private readonly TableBusiness tableBusiness = new TableBusiness();
+        private readonly ReceiptBusiness receiptBusiness = new ReceiptBusiness();
         private int idTable;
+        private bool occ;
+        public int billGlobal;
         public TableMenu(int idTable)
         {
             this.idTable = idTable;
@@ -44,7 +47,7 @@ namespace Caffee
                 string[] items = item.Split('+');
                 dataGridViewOrders.Rows.Add(items[0], items[1]);
             }
-
+            occ = false;
             label_Total_Price.Text = "Total Price: " + RefreshPrice() + " RSD";
         }
 
@@ -68,6 +71,12 @@ namespace Caffee
             dataGridViewOrders.Rows.Add(comboItem, ammount);
 
             label_Total_Price.Text = "Total Price: " + RefreshPrice() + " RSD";
+
+            occ = true;
+
+            tableBusiness.changeOccupancy(idTable, occ);
+
+            
 
             //bool occupied = false;
 
@@ -122,10 +131,28 @@ namespace Caffee
             }
             dataGridViewOrders.Rows.Clear();
 
+            occ = false;
+
+            tableBusiness.changeOccupancy(idTable, occ);
+
+            Receipt receipt = new Receipt();
+
+            receipt.Date = DateTime.Now;
+
+            receipt.Price = RefreshPrice();
+
+            receiptBusiness.InsertReceipt(receipt);
+
             label_Total_Price.Text = "Total price: 00.00 RSD";
 
             File.WriteAllText(Constants.GetPath() + "Sto" + this.idTable+".txt","");
+
             
+            //orderItemBusiness.DeleteOrderItemsWhereId(billId);
+            ////this.billGlobal = billId;
+            //billBusiness.DeleteBillWhereTableId(idTable);
+
+
         }
         private List<OrderItem> GetOrderItemsFromFile(int tableId)
         {

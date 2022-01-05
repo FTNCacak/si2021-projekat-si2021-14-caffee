@@ -49,31 +49,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>WZVwVXn43PJcHcDwME5K82tI+8vVeH5TSwTXWhB7qNs=</dsig:DigestValue>
+        <dsig:DigestValue>pIfC1VEc2iB1PHD9sdyPiyat7DSAqThqWmZKKa0jWTc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Caffee.exe" size="7050176">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Caffee.exe" size="7050688">
       <assemblyIdentity name="Caffee" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Ob6fMcTgw1mY6uMHs/5GADmA57aNRZCjV5NuVlwYczg=</dsig:DigestValue>
+        <dsig:DigestValue>z5nP1HhQrGpf+8AW/MwV4Vz6uLZm8qui+MI2jEywBSU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CaffeeData.dll" size="16896">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CaffeeData.dll" size="17408">
       <assemblyIdentity name="CaffeeData" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>PgfOnWcoOW0HEUpuqZoUQyodSfRRKTylCa3sHFSal4A=</dsig:DigestValue>
+        <dsig:DigestValue>R2HyAvZjUuZVLKh5MhrGDnZ6uWVxbJ+GOy+kR0BlfRk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

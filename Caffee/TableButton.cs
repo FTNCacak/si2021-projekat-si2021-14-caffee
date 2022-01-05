@@ -19,7 +19,8 @@ namespace Caffee
         private int posXEnd;
         private int posYEnd;
         public int id;
-        private readonly TableBusiness tableBusiness = new TableBusiness();  
+        private readonly TableBusiness tableBusiness = new TableBusiness();
+        private readonly BillBusiness billBusiness = new BillBusiness();
         
         public TableButton()
         {
@@ -70,7 +71,6 @@ namespace Caffee
             
             if(e.Button == MouseButtons.Right)
             {
-                
                 tableBusiness.deleteTable(id);
                 File.Delete(Constants.GetPath() + "Sto" + this.id + ".txt");
                 Console.WriteLine(this.id+" Table Button");
