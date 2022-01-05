@@ -12,14 +12,12 @@ namespace CaffeeData
     {
         public List<User> GetAllUsers()
         {
-            //Nisam mogao da pronadjem resenje za cuvanje u folderu u 
-            string filePath = @"C:\Users\Bane\Desktop\ProjekatSi\si2021-projekat-si2021-14-caffee\CaffeeData\Users.txt";
-
+            
             List<string> lines = new List<string>();
 
             List<User> users = new List<User>();
 
-            lines = File.ReadAllLines(filePath).ToList();
+            lines = File.ReadAllLines(GetPath()).ToList();
 
             foreach(string line in lines)
             {
@@ -39,7 +37,7 @@ namespace CaffeeData
             //string filePath = @"C:\Users\Bane\Desktop\ProjekatSi\si2021-projekat-si2021-14-caffee\CaffeeData\Users.txt";
 
             //Pajov file path
-            string filePath = @"~\\si2021-projekat-si2021-14-caffee\\CaffeeData\\Users.txt";
+            string filePath = GetPath();
 
             List<User> users = GetAllUsers();
 
@@ -64,7 +62,7 @@ namespace CaffeeData
                 //string filePath = @"C:\Users\Bane\Desktop\ProjekatSi\si2021-projekat-si2021-14-caffee\CaffeeData\Users.txt";
 
                 //Pajov file path
-                string filePath = @"~\\si2021-projekat-si2021-14-caffee\\CaffeeData\\Users.txt";
+                string filePath = GetPath();
 
                 List<User> users = GetAllUsers();
 
@@ -81,6 +79,16 @@ namespace CaffeeData
 
                 File.WriteAllLines(filePath, outContents);
             
+        }
+
+        public static string GetPath()
+        {
+            var roamingDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            var filePath = Path.Combine(roamingDirectory, "Users\\Users.txt");
+            if (!File.Exists(filePath))
+                Directory.CreateDirectory(filePath);
+
+            return filePath;
         }
 
     }
