@@ -36,3 +36,13 @@ C:\Users\Bane\Desktop\projekat\si2021-projekat-si2021-14-caffee\CaffeBusiness\ob
 C:\Users\Bane\Desktop\projekat\si2021-projekat-si2021-14-caffee\CaffeBusiness\obj\Debug\CaffeBusiness.csproj.CopyComplete
 C:\Users\Bane\Desktop\projekat\si2021-projekat-si2021-14-caffee\CaffeBusiness\obj\Debug\CaffeBusiness.dll
 C:\Users\Bane\Desktop\projekat\si2021-projekat-si2021-14-caffee\CaffeBusiness\obj\Debug\CaffeBusiness.pdb
+C:\Users\Bane\Desktop\github\si2021-projekat-si2021-14-caffee\CaffeBusiness\bin\Debug\CaffeBusiness.dll
+C:\Users\Bane\Desktop\github\si2021-projekat-si2021-14-caffee\CaffeBusiness\bin\Debug\CaffeBusiness.pdb
+C:\Users\Bane\Desktop\github\si2021-projekat-si2021-14-caffee\CaffeBusiness\bin\Debug\CaffeeData.dll
+C:\Users\Bane\Desktop\github\si2021-projekat-si2021-14-caffee\CaffeBusiness\bin\Debug\Control.Draggable.dll
+C:\Users\Bane\Desktop\github\si2021-projekat-si2021-14-caffee\CaffeBusiness\bin\Debug\CaffeeData.pdb
+C:\Users\Bane\Desktop\github\si2021-projekat-si2021-14-caffee\CaffeBusiness\obj\Debug\CaffeBusiness.csproj.AssemblyReference.cache
+C:\Users\Bane\Desktop\github\si2021-projekat-si2021-14-caffee\CaffeBusiness\obj\Debug\CaffeBusiness.csproj.CoreCompileInputs.cache
+C:\Users\Bane\Desktop\github\si2021-projekat-si2021-14-caffee\CaffeBusiness\obj\Debug\CaffeBusiness.csproj.CopyComplete
+C:\Users\Bane\Desktop\github\si2021-projekat-si2021-14-caffee\CaffeBusiness\obj\Debug\CaffeBusiness.dll
+C:\Users\Bane\Desktop\github\si2021-projekat-si2021-14-caffee\CaffeBusiness\obj\Debug\CaffeBusiness.pdb

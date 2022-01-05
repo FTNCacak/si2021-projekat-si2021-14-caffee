@@ -48,6 +48,7 @@
     <Compile Include="ItemBusiness.cs" />
     <Compile Include="OrderItemBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReceiptBusiness.cs" />
     <Compile Include="TableBusiness.cs" />
   </ItemGroup>
   <ItemGroup>

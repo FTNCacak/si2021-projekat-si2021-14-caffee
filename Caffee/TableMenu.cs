@@ -45,6 +45,7 @@ namespace Caffee
                 dataGridViewOrders.Rows.Add(items[0], items[1]);
             }
 
+            label_Total_Price.Text = "Total Price: " + RefreshPrice() + " RSD";
         }
 
         private void button_close_Click(object sender, EventArgs e)
@@ -66,6 +67,7 @@ namespace Caffee
             }
             dataGridViewOrders.Rows.Add(comboItem, ammount);
 
+            label_Total_Price.Text = "Total Price: " + RefreshPrice() + " RSD";
 
             //bool occupied = false;
 
@@ -120,6 +122,8 @@ namespace Caffee
             }
             dataGridViewOrders.Rows.Clear();
 
+            label_Total_Price.Text = "Total price: 00.00 RSD";
+
             File.WriteAllText(Constants.GetPath() + "Sto" + this.idTable+".txt","");
             
         }
@@ -143,6 +147,26 @@ namespace Caffee
             }
 
             return orderItems;
+        }
+
+        private decimal RefreshPrice()
+        {
+            decimal currentPrice = 0;
+
+            List<OrderItem> orderItems = GetOrderItemsFromFile(idTable);
+
+            foreach(OrderItem orderItem in orderItems)
+            {
+                int itemId = orderItem.ItemId;
+
+                decimal priceOfItem = itemBusiness.GetPriceOfItemByName(itemId);
+
+                Console.WriteLine(priceOfItem);
+
+                currentPrice += priceOfItem * orderItem.ItemQuantity;
+            }
+
+            return currentPrice;
         }
 
     }

@@ -121,8 +121,6 @@ namespace CaffeeData
 
                 sql.CommandText = string.Format("SELECT item_code FROM Items WHERE name='{0}'", itemName);
 
-                List<Item> items = new List<Item>();
-
                 sqlConnection.Open();
 
                 SqlDataReader dataReader = sql.ExecuteReader();
@@ -145,7 +143,28 @@ namespace CaffeeData
 
                 sql.CommandText = string.Format("SELECT price FROM Items WHERE name='{0}'", itemName);
 
-                List<Item> items = new List<Item>();
+                sqlConnection.Open();
+
+                SqlDataReader dataReader = sql.ExecuteReader();
+
+                decimal price = 0;
+
+                if (dataReader.Read())
+                    price = dataReader.GetDecimal(0);
+
+                return price;
+            }
+        }
+
+        public decimal GetPriceOfItemById(int id)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
+            {
+                SqlCommand sql = new SqlCommand();
+
+                sql.Connection = sqlConnection;
+
+                sql.CommandText = string.Format("SELECT price FROM Items WHERE item_code='{0}'", id);
 
                 sqlConnection.Open();
 

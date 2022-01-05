@@ -40,5 +40,10 @@ namespace CaffeBusiness
         {
             return itemRepository.GetPriceOfItemByName(itemName);
         }
+
+        public decimal GetPriceOfItemByName(int itemId)
+        {
+            return itemRepository.GetPriceOfItemById(itemId);
+        }
     }
 }

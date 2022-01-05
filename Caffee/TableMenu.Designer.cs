@@ -222,9 +222,9 @@ namespace Caffee
             this.label_Total_Price.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
             this.label_Total_Price.Location = new System.Drawing.Point(8, 210);
             this.label_Total_Price.Name = "label_Total_Price";
-            this.label_Total_Price.Size = new System.Drawing.Size(201, 20);
+            this.label_Total_Price.Size = new System.Drawing.Size(191, 20);
             this.label_Total_Price.TabIndex = 1;
-            this.label_Total_Price.Text = "Total price: 736.00 RSD";
+            this.label_Total_Price.Text = "Total price: 00.00 RSD";
             this.toolTip1.SetToolTip(this.label_Total_Price, "Total price of the order.");
             // 
             // dataGridViewOrders
