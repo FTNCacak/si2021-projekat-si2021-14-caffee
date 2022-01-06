@@ -97,6 +97,8 @@ namespace Caffee
         private void FormLoad(object sender, EventArgs e)
         {
             RefreshData();
+            dataGridView_menuItems.Columns[0].Visible = false;
+            dataGridView_menuItems.Columns[2].FillWeight = 25;
         }
     }
 }

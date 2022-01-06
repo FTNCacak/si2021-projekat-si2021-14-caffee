@@ -33,27 +33,27 @@ namespace Caffee
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateOwnerAccount));
             this.panel_Header = new System.Windows.Forms.Panel();
             this.label_title = new System.Windows.Forms.Label();
+            this.pictureBox_titlebar_logo = new System.Windows.Forms.PictureBox();
+            this.button_close = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonCreateOwnerAcc = new System.Windows.Forms.Button();
+            this.textBoxConfirmPassword = new System.Windows.Forms.TextBox();
+            this.labelConfirmPassword = new System.Windows.Forms.Label();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.labelPassword = new System.Windows.Forms.Label();
             this.textBoxUserName = new System.Windows.Forms.TextBox();
             this.labelUserName = new System.Windows.Forms.Label();
-            this.textBoxConfirmPassword = new System.Windows.Forms.TextBox();
-            this.labelConfirmPassword = new System.Windows.Forms.Label();
-            this.buttonCreateOwnerAcc = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox_titlebar_logo = new System.Windows.Forms.PictureBox();
-            this.button_close = new System.Windows.Forms.Button();
             this.panel_Header.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_titlebar_logo)).BeginInit();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_titlebar_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_Header
@@ -79,6 +79,34 @@ namespace Caffee
             this.label_title.TabIndex = 4;
             this.label_title.Text = "Create owner\'s account";
             // 
+            // pictureBox_titlebar_logo
+            // 
+            this.pictureBox_titlebar_logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_titlebar_logo.BackgroundImage")));
+            this.pictureBox_titlebar_logo.Location = new System.Drawing.Point(6, 0);
+            this.pictureBox_titlebar_logo.Name = "pictureBox_titlebar_logo";
+            this.pictureBox_titlebar_logo.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox_titlebar_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox_titlebar_logo.TabIndex = 1;
+            this.pictureBox_titlebar_logo.TabStop = false;
+            // 
+            // button_close
+            // 
+            this.button_close.AccessibleDescription = "";
+            this.button_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_close.BackgroundImage")));
+            this.button_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_close.FlatAppearance.BorderSize = 0;
+            this.button_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_close.Font = new System.Drawing.Font("Microsoft Tai Le", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
+            this.button_close.Location = new System.Drawing.Point(347, 0);
+            this.button_close.Name = "button_close";
+            this.button_close.Size = new System.Drawing.Size(46, 32);
+            this.button_close.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.button_close, "Close");
+            this.button_close.UseVisualStyleBackColor = true;
+            this.button_close.Click += new System.EventHandler(this.button_close_Click);
+            // 
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(184)))), ((int)(((byte)(146)))));
@@ -98,6 +126,85 @@ namespace Caffee
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(393, 400);
             this.panelMain.TabIndex = 5;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::Caffee.Properties.Resources.information;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(168, 259);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(18, 18);
+            this.pictureBox3.TabIndex = 14;
+            this.pictureBox3.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox3, "Passwords must match.");
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::Caffee.Properties.Resources.information;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(105, 184);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(18, 18);
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox2, "Password must be at least 8 characters long.");
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
+            this.label1.Location = new System.Drawing.Point(106, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(278, 100);
+            this.label1.TabIndex = 12;
+            this.label1.Text = resources.GetString("label1.Text");
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Caffee.Properties.Resources.information;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(85, 85);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // buttonCreateOwnerAcc
+            // 
+            this.buttonCreateOwnerAcc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(102)))), ((int)(((byte)(68)))));
+            this.buttonCreateOwnerAcc.FlatAppearance.BorderSize = 0;
+            this.buttonCreateOwnerAcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCreateOwnerAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCreateOwnerAcc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
+            this.buttonCreateOwnerAcc.Location = new System.Drawing.Point(131, 336);
+            this.buttonCreateOwnerAcc.Name = "buttonCreateOwnerAcc";
+            this.buttonCreateOwnerAcc.Size = new System.Drawing.Size(131, 32);
+            this.buttonCreateOwnerAcc.TabIndex = 10;
+            this.buttonCreateOwnerAcc.Text = "CREATE";
+            this.buttonCreateOwnerAcc.UseVisualStyleBackColor = false;
+            this.buttonCreateOwnerAcc.Click += new System.EventHandler(this.buttonCreateOwnerAcc_Click);
+            // 
+            // textBoxConfirmPassword
+            // 
+            this.textBoxConfirmPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
+            this.textBoxConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxConfirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
+            this.textBoxConfirmPassword.Location = new System.Drawing.Point(13, 281);
+            this.textBoxConfirmPassword.Name = "textBoxConfirmPassword";
+            this.textBoxConfirmPassword.PasswordChar = '*';
+            this.textBoxConfirmPassword.Size = new System.Drawing.Size(369, 23);
+            this.textBoxConfirmPassword.TabIndex = 9;
+            // 
+            // labelConfirmPassword
+            // 
+            this.labelConfirmPassword.AutoSize = true;
+            this.labelConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelConfirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
+            this.labelConfirmPassword.Location = new System.Drawing.Point(11, 259);
+            this.labelConfirmPassword.Name = "labelConfirmPassword";
+            this.labelConfirmPassword.Size = new System.Drawing.Size(151, 18);
+            this.labelConfirmPassword.TabIndex = 8;
+            this.labelConfirmPassword.Text = "Confirm password:";
             // 
             // textBoxPassword
             // 
@@ -142,112 +249,6 @@ namespace Caffee
             this.labelUserName.TabIndex = 4;
             this.labelUserName.Text = "User name:";
             // 
-            // textBoxConfirmPassword
-            // 
-            this.textBoxConfirmPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
-            this.textBoxConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxConfirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
-            this.textBoxConfirmPassword.Location = new System.Drawing.Point(13, 281);
-            this.textBoxConfirmPassword.Name = "textBoxConfirmPassword";
-            this.textBoxConfirmPassword.PasswordChar = '*';
-            this.textBoxConfirmPassword.Size = new System.Drawing.Size(369, 23);
-            this.textBoxConfirmPassword.TabIndex = 9;
-            // 
-            // labelConfirmPassword
-            // 
-            this.labelConfirmPassword.AutoSize = true;
-            this.labelConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelConfirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
-            this.labelConfirmPassword.Location = new System.Drawing.Point(11, 259);
-            this.labelConfirmPassword.Name = "labelConfirmPassword";
-            this.labelConfirmPassword.Size = new System.Drawing.Size(151, 18);
-            this.labelConfirmPassword.TabIndex = 8;
-            this.labelConfirmPassword.Text = "Confirm password:";
-            // 
-            // buttonCreateOwnerAcc
-            // 
-            this.buttonCreateOwnerAcc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(102)))), ((int)(((byte)(68)))));
-            this.buttonCreateOwnerAcc.FlatAppearance.BorderSize = 0;
-            this.buttonCreateOwnerAcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCreateOwnerAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCreateOwnerAcc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
-            this.buttonCreateOwnerAcc.Location = new System.Drawing.Point(131, 336);
-            this.buttonCreateOwnerAcc.Name = "buttonCreateOwnerAcc";
-            this.buttonCreateOwnerAcc.Size = new System.Drawing.Size(131, 32);
-            this.buttonCreateOwnerAcc.TabIndex = 10;
-            this.buttonCreateOwnerAcc.Text = "CREATE";
-            this.buttonCreateOwnerAcc.UseVisualStyleBackColor = false;
-            this.buttonCreateOwnerAcc.Click += new System.EventHandler(this.buttonCreateOwnerAcc_Click);
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
-            this.label1.Location = new System.Drawing.Point(106, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(278, 100);
-            this.label1.TabIndex = 12;
-            this.label1.Text = resources.GetString("label1.Text");
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::Caffee.Properties.Resources.information;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(168, 259);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(18, 18);
-            this.pictureBox3.TabIndex = 14;
-            this.pictureBox3.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox3, "Passwords must match.");
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::Caffee.Properties.Resources.information;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(105, 184);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(18, 18);
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox2, "Password must be at least 8 characters long.");
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Caffee.Properties.Resources.information;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(85, 85);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox_titlebar_logo
-            // 
-            this.pictureBox_titlebar_logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_titlebar_logo.BackgroundImage")));
-            this.pictureBox_titlebar_logo.Location = new System.Drawing.Point(6, 0);
-            this.pictureBox_titlebar_logo.Name = "pictureBox_titlebar_logo";
-            this.pictureBox_titlebar_logo.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox_titlebar_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox_titlebar_logo.TabIndex = 1;
-            this.pictureBox_titlebar_logo.TabStop = false;
-            // 
-            // button_close
-            // 
-            this.button_close.AccessibleDescription = "";
-            this.button_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_close.BackgroundImage")));
-            this.button_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_close.FlatAppearance.BorderSize = 0;
-            this.button_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_close.Font = new System.Drawing.Font("Microsoft Tai Le", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
-            this.button_close.Location = new System.Drawing.Point(347, 0);
-            this.button_close.Name = "button_close";
-            this.button_close.Size = new System.Drawing.Size(46, 32);
-            this.button_close.TabIndex = 1;
-            this.button_close.UseVisualStyleBackColor = true;
-            this.button_close.Click += new System.EventHandler(this.button_close_Click);
-            // 
             // CreateOwnerAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -256,17 +257,18 @@ namespace Caffee
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panel_Header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CreateOwnerAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateOwnerAccount";
             this.panel_Header.ResumeLayout(false);
             this.panel_Header.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_titlebar_logo)).EndInit();
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_titlebar_logo)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -56,7 +56,7 @@ namespace Caffee
 
 
         private void button1_MouseUp(object sender, MouseEventArgs e)
-        {//u ovoj funkciji negde se poziva cuvanje pozicije u bp
+        {
             posXEnd = this.Location.X;
             posYEnd = this.Location.Y;
 

@@ -29,21 +29,23 @@ namespace Caffee
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteItemConfirm));
             this.buttonYes = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.panel_Header = new System.Windows.Forms.Panel();
             this.label_title = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBoxWarningImage = new System.Windows.Forms.PictureBox();
             this.pictureBox_titlebar_logo = new System.Windows.Forms.PictureBox();
             this.button_close = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBoxWarningImage = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel_Header.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_titlebar_logo)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWarningImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_titlebar_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonYes
@@ -99,30 +101,6 @@ namespace Caffee
             this.label_title.TabIndex = 4;
             this.label_title.Text = "Remove item?";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(184)))), ((int)(((byte)(146)))));
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBoxWarningImage);
-            this.panel1.Controls.Add(this.buttonYes);
-            this.panel1.Controls.Add(this.buttonCancel);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 32);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(554, 143);
-            this.panel1.TabIndex = 3;
-            // 
-            // pictureBoxWarningImage
-            // 
-            this.pictureBoxWarningImage.BackgroundImage = global::Caffee.Properties.Resources.warning1;
-            this.pictureBoxWarningImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxWarningImage.Location = new System.Drawing.Point(12, 12);
-            this.pictureBoxWarningImage.Name = "pictureBoxWarningImage";
-            this.pictureBoxWarningImage.Size = new System.Drawing.Size(75, 75);
-            this.pictureBoxWarningImage.TabIndex = 2;
-            this.pictureBoxWarningImage.TabStop = false;
-            // 
             // pictureBox_titlebar_logo
             // 
             this.pictureBox_titlebar_logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_titlebar_logo.BackgroundImage")));
@@ -148,18 +126,22 @@ namespace Caffee
             this.button_close.Name = "button_close";
             this.button_close.Size = new System.Drawing.Size(46, 32);
             this.button_close.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.button_close, "Close");
             this.button_close.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // panel1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
-            this.label1.Location = new System.Drawing.Point(99, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(443, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Are you sure you want to remove this item from menu?";
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(184)))), ((int)(((byte)(146)))));
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.pictureBoxWarningImage);
+            this.panel1.Controls.Add(this.buttonYes);
+            this.panel1.Controls.Add(this.buttonCancel);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 32);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(554, 143);
+            this.panel1.TabIndex = 3;
             // 
             // label2
             // 
@@ -172,6 +154,27 @@ namespace Caffee
             this.label2.TabIndex = 4;
             this.label2.Text = "This action cannot be undone.";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
+            this.label1.Location = new System.Drawing.Point(99, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(443, 20);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Are you sure you want to remove this item from menu?";
+            // 
+            // pictureBoxWarningImage
+            // 
+            this.pictureBoxWarningImage.BackgroundImage = global::Caffee.Properties.Resources.warning1;
+            this.pictureBoxWarningImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxWarningImage.Location = new System.Drawing.Point(12, 12);
+            this.pictureBoxWarningImage.Name = "pictureBoxWarningImage";
+            this.pictureBoxWarningImage.Size = new System.Drawing.Size(75, 75);
+            this.pictureBoxWarningImage.TabIndex = 2;
+            this.pictureBoxWarningImage.TabStop = false;
+            // 
             // DeleteItemConfirm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,14 +183,15 @@ namespace Caffee
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel_Header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DeleteItemConfirm";
             this.Text = "DeleteItemConfirm";
             this.panel_Header.ResumeLayout(false);
             this.panel_Header.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_titlebar_logo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWarningImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_titlebar_logo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -204,5 +208,6 @@ namespace Caffee
         private System.Windows.Forms.PictureBox pictureBoxWarningImage;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

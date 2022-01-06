@@ -29,6 +29,7 @@ namespace Caffee
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuSettings));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -40,6 +41,7 @@ namespace Caffee
             this.buttonDeleteItem = new System.Windows.Forms.Button();
             this.buttonEditItem = new System.Windows.Forms.Button();
             this.buttonAddItem = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_titlebar_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_menuItems)).BeginInit();
@@ -92,6 +94,7 @@ namespace Caffee
             this.button_close.Name = "button_close";
             this.button_close.Size = new System.Drawing.Size(46, 32);
             this.button_close.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.button_close, "Close");
             this.button_close.UseVisualStyleBackColor = true;
             this.button_close.Click += new System.EventHandler(this.button_close_Click);
             // 
@@ -131,7 +134,7 @@ namespace Caffee
             this.dataGridView_menuItems.RowHeadersVisible = false;
             this.dataGridView_menuItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_menuItems.ShowCellToolTips = false;
-            this.dataGridView_menuItems.Size = new System.Drawing.Size(651, 298);
+            this.dataGridView_menuItems.Size = new System.Drawing.Size(651, 288);
             this.dataGridView_menuItems.TabIndex = 2;
             // 
             // buttonDeleteItem
@@ -140,7 +143,7 @@ namespace Caffee
             this.buttonDeleteItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonDeleteItem.FlatAppearance.BorderSize = 0;
             this.buttonDeleteItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDeleteItem.Location = new System.Drawing.Point(94, 356);
+            this.buttonDeleteItem.Location = new System.Drawing.Point(94, 346);
             this.buttonDeleteItem.Name = "buttonDeleteItem";
             this.buttonDeleteItem.Size = new System.Drawing.Size(35, 35);
             this.buttonDeleteItem.TabIndex = 5;
@@ -153,7 +156,7 @@ namespace Caffee
             this.buttonEditItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonEditItem.FlatAppearance.BorderSize = 0;
             this.buttonEditItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEditItem.Location = new System.Drawing.Point(53, 356);
+            this.buttonEditItem.Location = new System.Drawing.Point(53, 346);
             this.buttonEditItem.Name = "buttonEditItem";
             this.buttonEditItem.Size = new System.Drawing.Size(35, 35);
             this.buttonEditItem.TabIndex = 4;
@@ -166,7 +169,7 @@ namespace Caffee
             this.buttonAddItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonAddItem.FlatAppearance.BorderSize = 0;
             this.buttonAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAddItem.Location = new System.Drawing.Point(12, 356);
+            this.buttonAddItem.Location = new System.Drawing.Point(12, 346);
             this.buttonAddItem.Name = "buttonAddItem";
             this.buttonAddItem.Size = new System.Drawing.Size(35, 35);
             this.buttonAddItem.TabIndex = 3;
@@ -178,13 +181,14 @@ namespace Caffee
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(184)))), ((int)(((byte)(146)))));
-            this.ClientSize = new System.Drawing.Size(676, 403);
+            this.ClientSize = new System.Drawing.Size(676, 393);
             this.Controls.Add(this.buttonDeleteItem);
             this.Controls.Add(this.buttonEditItem);
             this.Controls.Add(this.buttonAddItem);
             this.Controls.Add(this.dataGridView_menuItems);
             this.Controls.Add(this.panel_Header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MenuSettings";
             this.Text = "MenuSettings";
             this.Load += new System.EventHandler(this.FormLoad);
@@ -206,5 +210,6 @@ namespace Caffee
         private System.Windows.Forms.Button buttonAddItem;
         private System.Windows.Forms.Button buttonEditItem;
         private System.Windows.Forms.Button buttonDeleteItem;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

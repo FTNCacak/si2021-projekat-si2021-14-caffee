@@ -17,11 +17,11 @@ namespace CaffeeData
             using (SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
             {
                 SqlCommand command = new SqlCommand();
-
                 command.Connection = sqlConnection;
 
-                command.CommandText = "SELECT * FROM Receipts";
-
+                DateTime DateTime_Begin = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 12, 0, 0);
+                command.CommandText = string.Format("SELECT * FROM Receipts WHERE Date >= '{0}'", DateTime.UtcNow.ToString("d"));
+                Console.WriteLine(DateTime.UtcNow.ToString("d"));
                 List<Receipt> receipts = new List<Receipt>();
 
                 sqlConnection.Open();

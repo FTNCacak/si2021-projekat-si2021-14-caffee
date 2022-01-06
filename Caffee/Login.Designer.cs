@@ -29,18 +29,20 @@ namespace Caffee
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel_Header = new System.Windows.Forms.Panel();
             this.label_title = new System.Windows.Forms.Label();
             this.pictureBox_titlebar_logo = new System.Windows.Forms.PictureBox();
             this.button_close = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.labelPassword = new System.Windows.Forms.Label();
             this.textBoxUserName = new System.Windows.Forms.TextBox();
             this.labelUserName = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_titlebar_logo)).BeginInit();
             this.panelMain.SuspendLayout();
@@ -93,6 +95,7 @@ namespace Caffee
             this.button_close.Name = "button_close";
             this.button_close.Size = new System.Drawing.Size(46, 32);
             this.button_close.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.button_close, "Close");
             this.button_close.UseVisualStyleBackColor = true;
             this.button_close.Click += new System.EventHandler(this.button_close_Click);
             // 
@@ -110,6 +113,17 @@ namespace Caffee
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(393, 268);
             this.panelMain.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
+            this.label1.Location = new System.Drawing.Point(103, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(187, 20);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Log in to your account";
             // 
             // buttonLogin
             // 
@@ -169,17 +183,6 @@ namespace Caffee
             this.labelUserName.TabIndex = 4;
             this.labelUserName.Text = "User name:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(65)))), ((int)(((byte)(44)))));
-            this.label1.Location = new System.Drawing.Point(103, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 20);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Log in to your account";
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,6 +191,7 @@ namespace Caffee
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panel_Header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -213,5 +217,6 @@ namespace Caffee
         protected System.Windows.Forms.TextBox textBoxUserName;
         private System.Windows.Forms.Label labelUserName;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

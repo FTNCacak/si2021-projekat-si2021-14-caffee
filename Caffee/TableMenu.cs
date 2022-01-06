@@ -35,6 +35,16 @@ namespace Caffee
             dataGridViewOrders.ColumnCount = 2;
             dataGridViewOrders.Columns[0].Name = "Item name";
             dataGridViewOrders.Columns[1].Name = "Ammount";
+            dataGridViewOrders.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewOrders.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewOrders.Columns[0].FillWeight = 400;
+            dataGridViewOrders.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 230, 204, 178);
+            dataGridViewOrders.ColumnHeadersDefaultCellStyle.SelectionForeColor = Color.FromArgb(255, 99, 65, 44);
+            dataGridViewOrders.DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 230, 204, 178);
+            dataGridViewOrders.DefaultCellStyle.SelectionForeColor = Color.FromArgb(255, 99, 65, 44);
+            dataGridViewOrders.DefaultCellStyle.ForeColor = Color.FromArgb(255, 99, 65, 44);
+            dataGridViewOrders.DefaultCellStyle.BackColor = Color.FromArgb(255, 237, 224, 212);
+
             foreach (Item item in itemBusiness.getAllItems())
             {
                 comboBox_Article.Items.Add(item.Name);
@@ -56,6 +66,7 @@ namespace Caffee
 
         }
 
+        
         private void button_close_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -201,5 +212,11 @@ namespace Caffee
             return currentPrice;
         }
 
+        private void dataGridViewOrders_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            e.CellStyle.Font = new Font("Microsoft SanS Serif", 10f, FontStyle.Bold);
+            e.CellStyle.SelectionBackColor = Color.FromArgb(255, 230, 204, 178);
+            e.CellStyle.SelectionForeColor = Color.FromArgb(255, 99, 65, 44);
+        }
     }
 }

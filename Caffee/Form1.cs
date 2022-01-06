@@ -10,12 +10,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using SautinSoft.Document;
 
 namespace Caffee
 {
     public partial class MainWindow : Form
     {
         private readonly TableBusiness tableBusiness = new TableBusiness();
+        private readonly ReceiptBusiness receiptBusiness = new ReceiptBusiness();
 
         ToolTip tableToolTip = new ToolTip();
         public MainWindow()
@@ -98,7 +100,7 @@ namespace Caffee
             pictureBox_accountPicture.Visible = true;
             label_accountUsername.Visible = true;
             label_accountRole.Visible = true;
-            panel_accountPanel.BackColor = Color.FromArgb(255, 176, 137, 104);
+            panel_accountPanel.BackColor = System.Drawing.Color.FromArgb(255, 176, 137, 104);
         }
 
         private void HideSideMenuContent()
@@ -171,9 +173,29 @@ namespace Caffee
 
         private void button_logout_Click(object sender, EventArgs e)
         {
-            Login lg = new Login();
+            this.Hide();
+            var lg = new Login();
+            lg.Closed += (s, args) => this.Close();
             lg.Show();
-            //this.Dispose();
+        }
+
+        private void button_dailyRecap_Click(object sender, EventArgs e)
+        {
+            string results = "";
+            decimal price = 0;
+            foreach(Receipt receipt in receiptBusiness.GetAllReceipts())
+            {
+                results += receipt.Date + "..............." + receipt.Price + "\n";
+                price += receipt.Price;
+            }
+            results += "\n" + "Total earnings for today: " + price;
+
+
+            DocumentCore dc = new DocumentCore();
+            dc.Content.End.Insert("Daily earning report\n\n", new CharacterFormat() { FontName = "Verdana", Size = 28f, FontColor = SautinSoft.Document.Color.Black });
+            dc.Content.End.Insert(results, new CharacterFormat() { FontName = "Verdana", Size = 16f, FontColor = SautinSoft.Document.Color.Black});
+            dc.Save("Report.pdf");
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo("Report.pdf") { UseShellExecute = true });
         }
     }
 }

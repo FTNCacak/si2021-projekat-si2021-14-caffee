@@ -39,6 +39,7 @@ namespace Caffee
             this.button_close = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel_sideMenu = new System.Windows.Forms.Panel();
+            this.labelCopyrightInfo = new System.Windows.Forms.Label();
             this.button_logout = new System.Windows.Forms.Button();
             this.button_dailyRecap = new System.Windows.Forms.Button();
             this.button_menu = new System.Windows.Forms.Button();
@@ -149,6 +150,7 @@ namespace Caffee
             // 
             this.panel_sideMenu.AutoScroll = true;
             this.panel_sideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(102)))), ((int)(((byte)(68)))));
+            this.panel_sideMenu.Controls.Add(this.labelCopyrightInfo);
             this.panel_sideMenu.Controls.Add(this.button_logout);
             this.panel_sideMenu.Controls.Add(this.button_dailyRecap);
             this.panel_sideMenu.Controls.Add(this.button_menu);
@@ -159,6 +161,18 @@ namespace Caffee
             this.panel_sideMenu.Name = "panel_sideMenu";
             this.panel_sideMenu.Size = new System.Drawing.Size(216, 652);
             this.panel_sideMenu.TabIndex = 1;
+            // 
+            // labelCopyrightInfo
+            // 
+            this.labelCopyrightInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.labelCopyrightInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCopyrightInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(224)))), ((int)(((byte)(212)))));
+            this.labelCopyrightInfo.Location = new System.Drawing.Point(0, 629);
+            this.labelCopyrightInfo.Name = "labelCopyrightInfo";
+            this.labelCopyrightInfo.Size = new System.Drawing.Size(216, 23);
+            this.labelCopyrightInfo.TabIndex = 4;
+            this.labelCopyrightInfo.Text = "© Slozna Braca Software Inc.";
+            this.labelCopyrightInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // button_logout
             // 
@@ -190,6 +204,7 @@ namespace Caffee
             this.button_dailyRecap.Text = "DAILY REPORT";
             this.button_dailyRecap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_dailyRecap.UseVisualStyleBackColor = true;
+            this.button_dailyRecap.Click += new System.EventHandler(this.button_dailyRecap_Click);
             // 
             // button_menu
             // 
@@ -292,6 +307,7 @@ namespace Caffee
             this.button_showMenu.Name = "button_showMenu";
             this.button_showMenu.Size = new System.Drawing.Size(38, 38);
             this.button_showMenu.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.button_showMenu, "Show Menu");
             this.button_showMenu.UseVisualStyleBackColor = true;
             this.button_showMenu.Click += new System.EventHandler(this.button_showMenu_Click);
             // 
@@ -305,6 +321,7 @@ namespace Caffee
             this.button_hideMenu.Name = "button_hideMenu";
             this.button_hideMenu.Size = new System.Drawing.Size(38, 38);
             this.button_hideMenu.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.button_hideMenu, "Hide Menu");
             this.button_hideMenu.UseVisualStyleBackColor = true;
             this.button_hideMenu.Click += new System.EventHandler(this.button_hideMenu_Click);
             // 
@@ -326,6 +343,7 @@ namespace Caffee
             this.Controls.Add(this.panel_sideMenu);
             this.Controls.Add(this.panel_Header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWindow";
             this.Text = "MyCaffee";
             this.Load += new System.EventHandler(this.MainWindow_Load);
@@ -362,6 +380,7 @@ namespace Caffee
         private System.Windows.Forms.Label label_accountUsername;
         private System.Windows.Forms.Panel panel_accountLabelPanel;
         private System.Windows.Forms.Label label_accountRole;
+        private System.Windows.Forms.Label labelCopyrightInfo;
     }
 }
 
