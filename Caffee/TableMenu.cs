@@ -49,11 +49,16 @@ namespace Caffee
             }
             occ = false;
             label_Total_Price.Text = "Total Price: " + RefreshPrice() + " RSD";
+
+
+            //testiranje date
+            Console.WriteLine("Danas je: " + DateTime.Now);
+
         }
 
         private void button_close_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Close();
         }
 
         private void button_AddToOrder_Click(object sender, EventArgs e)

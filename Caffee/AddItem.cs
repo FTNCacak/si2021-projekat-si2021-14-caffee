@@ -22,7 +22,7 @@ namespace Caffee
 
         private void button_close_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Close();
         }
 
         private void buttonAddItem_Click(object sender, EventArgs e)

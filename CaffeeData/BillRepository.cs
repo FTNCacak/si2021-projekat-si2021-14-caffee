@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,7 +57,7 @@ namespace CaffeeData
 
                 command.Connection = sqlConnection;
 
-                command.CommandText = string.Format("INSERT INTO Bills VALUES('{0}', {1})",b.DateOfIssue,b.TableId);
+                command.CommandText = string.Format("INSERT INTO Bills VALUES('{0}', {1})", b.formattedDate, b.TableId);
 
                 sqlConnection.Open();
 

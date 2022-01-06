@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pIfC1VEc2iB1PHD9sdyPiyat7DSAqThqWmZKKa0jWTc=</dsig:DigestValue>
+        <dsig:DigestValue>heJoyerE5JbYT8dDHE7zOvsNF4TVZD7tYiLBQ5Zzr7I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,19 +61,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>z5nP1HhQrGpf+8AW/MwV4Vz6uLZm8qui+MI2jEywBSU=</dsig:DigestValue>
+        <dsig:DigestValue>+My8dzmmqZFby1LsnOlrFjV319qX7m3cKl7nqbOuKAA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CaffeeData.dll" size="17408">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CaffeeData.dll" size="17920">
       <assemblyIdentity name="CaffeeData" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>R2HyAvZjUuZVLKh5MhrGDnZ6uWVxbJ+GOy+kR0BlfRk=</dsig:DigestValue>
+        <dsig:DigestValue>DB7GMu6aWeVkoAdPmBmbo3Qz4cpTBdPcsv5hatKG7Ns=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

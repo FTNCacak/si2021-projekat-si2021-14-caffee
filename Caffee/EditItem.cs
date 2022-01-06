@@ -35,7 +35,7 @@ namespace Caffee
 
         private void button_close_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Close();
         }
 
         private void EditLoad(object sender, EventArgs e)

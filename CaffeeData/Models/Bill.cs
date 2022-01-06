@@ -13,13 +13,15 @@ namespace CaffeeData.Models
         public DateTime DateOfIssue { get; set; }
 
         public int TableId { get; set; }
+        public string formattedDate { get; set; }
+
 
       
 
         public Bill(int tableId)
         {
             DateOfIssue = DateTime.Now;
-
+            formattedDate = DateOfIssue.ToString("yyyy-MM-dd HH:mm:ss.fff");
             TableId = tableId;
         }
         public Bill() { }
