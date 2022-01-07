@@ -24,5 +24,18 @@ namespace CaffeBusiness
         {
             userRepository.InsertNewOwner(owner) ;  
         }
+
+        public bool VerifyUserName(string uname)
+        {
+            bool exists = false;
+
+            foreach (User u in userRepository.GetAllUsers())
+            {
+                if (uname == u.UserName)
+                    exists = true;
+            }
+
+            return exists;
+        }
     }
 }

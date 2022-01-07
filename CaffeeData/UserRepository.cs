@@ -17,13 +17,15 @@ namespace CaffeeData
 
             List<User> users = new List<User>();
 
-            lines = File.ReadAllLines(GetPath()).ToList();
+            string filePath = GetPath() + "Users.txt";
+
+            lines = File.ReadAllLines(filePath).ToList();
 
             foreach(string line in lines)
             {
                 string[] items = line.Split(',');
 
-                User u = new User(items[0], items[1], Convert.ToBoolean(items[2]));
+                User u = new User(items[0], items[1], Convert.ToBoolean(items[2].ToLower()));
 
                 users.Add(u);
             }
@@ -37,7 +39,7 @@ namespace CaffeeData
             //string filePath = @"C:\Users\Bane\Desktop\ProjekatSi\si2021-projekat-si2021-14-caffee\CaffeeData\Users.txt";
 
             //Pajov file path
-            string filePath = GetPath();
+            string filePath = GetPath() + "Users.txt"; 
 
             List<User> users = GetAllUsers();
 
@@ -62,11 +64,18 @@ namespace CaffeeData
             //string filePath = @"C:\Users\Bane\Desktop\ProjekatSi\si2021-projekat-si2021-14-caffee\CaffeeData\Users.txt";
 
             //Pajov file path
-            string path = GetPath()+ "Users" + ".txt";
-            using (FileStream fs = File.Create(path)) { }
-            string filePath = GetPath()+"Users.txt";
+            List<User> users = new List<User>();
 
-                List<User> users = GetAllUsers();
+            string filePath = GetPath() + "Users.txt";
+
+            if (!CheckIfExists(filePath))
+            {
+                using (FileStream fs = File.Create(filePath)) { }
+            }
+            else if (!isEmpty(filePath))
+            {
+                users = GetAllUsers();
+            }
 
                 users.Add(owner);
 
@@ -92,6 +101,32 @@ namespace CaffeeData
                 Directory.CreateDirectory(filePath);
 
             return filePath;
+        }
+
+        private bool CheckIfExists(string filePath)
+        {
+            if (File.Exists(filePath))
+            {
+                //if (new FileInfo(filePath).Length != 0)
+                //{
+                //    return false;
+                //}
+                return true;
+            }
+            else return false;
+
+            //if (new FileInfo(filePath).Length != 0)
+            //    return false;
+            //return true;
+        }
+
+        private bool isEmpty(string filePath)
+        {
+            if (new FileInfo(filePath).Length == 0)
+            {
+                return true;
+            }
+            return false;
         }
 
     }

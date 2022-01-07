@@ -86,6 +86,7 @@ namespace Caffee
             this.button_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_close.BackgroundImage")));
             this.button_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_close.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button_close.FlatAppearance.BorderSize = 0;
             this.button_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_close.Font = new System.Drawing.Font("Microsoft Tai Le", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -113,7 +114,7 @@ namespace Caffee
             // buttonAnswerNo
             // 
             this.buttonAnswerNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(102)))), ((int)(((byte)(68)))));
-            this.buttonAnswerNo.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.buttonAnswerNo.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonAnswerNo.FlatAppearance.BorderSize = 0;
             this.buttonAnswerNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAnswerNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -128,7 +129,7 @@ namespace Caffee
             // buttonAnswerYes
             // 
             this.buttonAnswerYes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(102)))), ((int)(((byte)(68)))));
-            this.buttonAnswerYes.DialogResult = System.Windows.Forms.DialogResult.Yes;
+            this.buttonAnswerYes.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonAnswerYes.FlatAppearance.BorderSize = 0;
             this.buttonAnswerYes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAnswerYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -171,6 +172,7 @@ namespace Caffee
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InfoWarningError";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InfoWarningError";
             this.panel_Header.ResumeLayout(false);
             this.panel_Header.PerformLayout();

@@ -52,3 +52,10 @@ C:\Users\pajo\Desktop\Projekat\si2021-projekat-si2021-14-caffee\CaffeeData\obj\D
 C:\Users\pajo\Desktop\Projekat\si2021-projekat-si2021-14-caffee\CaffeeData\obj\Debug\CaffeeData.csproj.CopyComplete
 C:\Users\pajo\Desktop\Projekat\si2021-projekat-si2021-14-caffee\CaffeeData\obj\Debug\CaffeeData.dll
 C:\Users\pajo\Desktop\Projekat\si2021-projekat-si2021-14-caffee\CaffeeData\obj\Debug\CaffeeData.pdb
+C:\Users\Bane\Desktop\drazo peder\si2021-projekat-si2021-14-caffee\CaffeeData\bin\Debug\CaffeeData.dll
+C:\Users\Bane\Desktop\drazo peder\si2021-projekat-si2021-14-caffee\CaffeeData\bin\Debug\CaffeeData.pdb
+C:\Users\Bane\Desktop\drazo peder\si2021-projekat-si2021-14-caffee\CaffeeData\bin\Debug\Control.Draggable.dll
+C:\Users\Bane\Desktop\drazo peder\si2021-projekat-si2021-14-caffee\CaffeeData\obj\Debug\CaffeeData.csproj.CoreCompileInputs.cache
+C:\Users\Bane\Desktop\drazo peder\si2021-projekat-si2021-14-caffee\CaffeeData\obj\Debug\CaffeeData.csproj.CopyComplete
+C:\Users\Bane\Desktop\drazo peder\si2021-projekat-si2021-14-caffee\CaffeeData\obj\Debug\CaffeeData.dll
+C:\Users\Bane\Desktop\drazo peder\si2021-projekat-si2021-14-caffee\CaffeeData\obj\Debug\CaffeeData.pdb
