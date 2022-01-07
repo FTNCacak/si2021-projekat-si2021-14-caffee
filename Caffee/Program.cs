@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
 namespace Caffee
 {
     static class Program
@@ -16,8 +16,11 @@ namespace Caffee
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainWindow());
-            //Application.Run(new CreateOwnerAccount());
+            if (File.Exists(Constants.GetPath()+"Users.txt"))
+                Application.Run(new Login());
+            else {
+                Application.Run(new CreateOwnerAccount());
+            }
         }
     }
 }

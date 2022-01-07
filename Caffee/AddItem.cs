@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Text.RegularExpressions;
 namespace Caffee
 {
     public partial class AddItem : Form
@@ -27,10 +27,16 @@ namespace Caffee
 
         private void buttonAddItem_Click(object sender, EventArgs e)
         {
+            string Itemnamepattern= "@^[a-zA-Z]([a-zA-Z0-9]){3,20}$";
             Item item = new Item(); 
             item.Name = textBoxItemName.Text;
             item.Price = decimal.Parse(textBoxItemPrice.Text);
-            itemBusiness.insertItem(item);
+            Match match = Regex.Match(Itemnamepattern, item.Name);
+            if (match.Success && item.Price>0)
+            {
+                itemBusiness.insertItem(item);
+            }
+            
         }
     }
 }

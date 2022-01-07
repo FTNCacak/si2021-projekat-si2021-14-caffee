@@ -57,12 +57,14 @@ namespace CaffeeData
 
         public void InsertNewOwner(Owner owner)
         {
-          
-                //Banov flie path
-                //string filePath = @"C:\Users\Bane\Desktop\ProjekatSi\si2021-projekat-si2021-14-caffee\CaffeeData\Users.txt";
 
-                //Pajov file path
-                string filePath = GetPath();
+            //Banov flie path
+            //string filePath = @"C:\Users\Bane\Desktop\ProjekatSi\si2021-projekat-si2021-14-caffee\CaffeeData\Users.txt";
+
+            //Pajov file path
+            string path = GetPath()+ "Users" + ".txt";
+            using (FileStream fs = File.Create(path)) { }
+            string filePath = GetPath()+"Users.txt";
 
                 List<User> users = GetAllUsers();
 
@@ -83,8 +85,9 @@ namespace CaffeeData
 
         public static string GetPath()
         {
+            
             var roamingDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            var filePath = Path.Combine(roamingDirectory, "Users\\Users.txt");
+            var filePath = Path.Combine(roamingDirectory, "Astali\\");
             if (!File.Exists(filePath))
                 Directory.CreateDirectory(filePath);
 

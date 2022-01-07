@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Text.RegularExpressions;
 namespace Caffee
 {
     public partial class CreateWaiterAccount : Form
@@ -29,6 +29,24 @@ namespace Caffee
             //yes --> ciscenje textboxova i dodavanje jos jednog konobara
             //no --> prelazak na login formu
             //ciscenje texboxova
+            string Passwordpattern = "@^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,20}$";
+            string Userpattern = "@^[a-zA-Z0-9]([._-](?![._-])|[a-zA-Z0-9]){4,20}[a-zA-Z0-9]$";
+
+            Match match = Regex.Match(Userpattern, textBoxUserName.Text);
+            if (match.Success && textBoxUserName.Text != string.Empty)
+            {
+
+            }
+            match = Regex.Match(Passwordpattern, textBoxPassword.Text);
+            if (match.Success && textBoxUserName.Text != string.Empty)
+            {
+
+            }
+            match = Regex.Match(Passwordpattern, textBoxConfirmPassword.Text);
+            if (match.Success && textBoxUserName.Text != string.Empty && textBoxPassword.Text == textBoxConfirmPassword.Text)
+            {
+
+            }
         }
 
         private void buttonExit_Click(object sender, EventArgs e)

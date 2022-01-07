@@ -74,25 +74,31 @@ namespace Caffee
 
         private void button_AddToOrder_Click(object sender, EventArgs e)
         {
-
-            string comboItem = comboBox_Article.Text;
-            int ammount = Convert.ToInt32(numericUpDown_Amount.Value);
-            numericUpDown_Amount.Value = 1;
-            comboBox_Article.SelectedIndex = -1;
-
-            using (StreamWriter streamWriter = new StreamWriter(Constants.GetPath() + "Sto" + this.idTable + ".txt", append: true))
+            string comboItem;
+            if (comboBox_Article.Text != null && comboBox_Article.Text != "")
             {
-                streamWriter.WriteLine(comboItem + "+" + ammount);
+                comboItem = comboBox_Article.Text;
+                int ammount = Convert.ToInt32(numericUpDown_Amount.Value);
+                numericUpDown_Amount.Value = 1;
+                comboBox_Article.SelectedIndex = -1;
+
+                using (StreamWriter streamWriter = new StreamWriter(Constants.GetPath() + "Sto" + this.idTable + ".txt", append: true))
+                {
+                    streamWriter.WriteLine(comboItem + "+" + ammount);
+                }
+                dataGridViewOrders.Rows.Add(comboItem, ammount);
+
+                label_Total_Price.Text = "Total Price: " + RefreshPrice() + " RSD";
+
+                occ = true;
+
+                tableBusiness.changeOccupancy(idTable, occ);
+
             }
-            dataGridViewOrders.Rows.Add(comboItem, ammount);
-
-            label_Total_Price.Text = "Total Price: " + RefreshPrice() + " RSD";
-
-            occ = true;
-
-            tableBusiness.changeOccupancy(idTable, occ);
-
-            
+            else
+            {
+                Console.WriteLine("Evo greske");
+            }
 
             //bool occupied = false;
 

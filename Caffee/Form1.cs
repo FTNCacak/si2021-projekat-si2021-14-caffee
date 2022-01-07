@@ -147,15 +147,15 @@ namespace Caffee
             Table table = new Table();
             table.Occupied = false;
             table.position_h = panelFloor.Height / 2;
-            table.position_w= panelFloor.Width / 2;
+            table.position_w = panelFloor.Width / 2;
             tableBusiness.insertTable(table);
             tb.id = tableBusiness.getAllTables().Last().Id;
             tableToolTip.SetToolTip(tb, "Drag to move.\nRight-click to remove.");
             panelFloor.Controls.Add(tb);
 
-            string path = Constants.GetPath() + "Sto" + tableBusiness.getAllTables().Last().Id+".txt";
-            
-            using (FileStream fs = File.Create(path)) ;
+            string path = Constants.GetPath() + "Sto" + tableBusiness.getAllTables().Last().Id + ".txt";
+
+            using (FileStream fs = File.Create(path)){}
 
             Console.WriteLine(tableBusiness.getAllTables().Last().Id);
         }

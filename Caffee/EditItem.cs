@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Text.RegularExpressions;
 namespace Caffee
 {
     public partial class EditItem : Form
@@ -28,7 +28,13 @@ namespace Caffee
 
         private void buttonSaveChanges_Click(object sender, EventArgs e)
         {
-            itemBusiness.updatePrice(Id,Price=Convert.ToDecimal(textBoxItemPrice.Text),ItemName=textBoxItemName.Text);
+            string Itemnamepattern = "@^[a-zA-Z]([a-zA-Z0-9]){3,20}$";
+            Match match = Regex.Match(Itemnamepattern, textBoxItemName.Text);
+            if (match.Success && Convert.ToDecimal(textBoxItemPrice.Text) > 0)
+            {
+                itemBusiness.updatePrice(Id, Price = Convert.ToDecimal(textBoxItemPrice.Text), ItemName = textBoxItemName.Text);
+            }
+            
             
             
         }
