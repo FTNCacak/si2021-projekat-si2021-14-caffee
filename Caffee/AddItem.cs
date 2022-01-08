@@ -27,16 +27,21 @@ namespace Caffee
 
         private void buttonAddItem_Click(object sender, EventArgs e)
         {
-            string Itemnamepattern= "@^[a-zA-Z]([a-zA-Z0-9]){3,20}$";
+            string Itemnamepattern= @"^[a-zA-Z]([a-zA-Z0-9\s]){3,20}$";
             Item item = new Item(); 
             item.Name = textBoxItemName.Text;
             item.Price = decimal.Parse(textBoxItemPrice.Text);
-            Match match = Regex.Match(Itemnamepattern, item.Name);
+            Match match = Regex.Match(item.Name, Itemnamepattern);
             if (match.Success && item.Price>0)
             {
                 itemBusiness.insertItem(item);
             }
-            
+            else
+            {
+                InfoWarningError infoWarning = new InfoWarningError("Invalid item name!", "error", "OK", "CANCEL");
+                infoWarning.ShowDialog();   
+            }
+
         }
     }
 }
