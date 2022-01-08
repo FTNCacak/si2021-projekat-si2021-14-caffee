@@ -96,21 +96,6 @@ namespace CaffeeData
                 return command.ExecuteNonQuery();
             }
         }
-        public int DeleteItemByName(string name)
-        {
-            using (SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
-            {
-                SqlCommand command = new SqlCommand();
-
-                command.Connection = sqlConnection;
-
-                command.CommandText = string.Format("DELETE FROM Items WHERE name = {0}", name);
-
-                sqlConnection.Open();
-
-                return command.ExecuteNonQuery();
-            }
-        }
         public int GetIdOfNameItem(string itemName)
         {
             using (SqlConnection sqlConnection = new SqlConnection(constant.connectionString))

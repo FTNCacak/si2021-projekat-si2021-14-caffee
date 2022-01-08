@@ -14,20 +14,10 @@ namespace CaffeBusiness
         
         //method that calls GetAllOrderItems from OrderItemRepository class and returns list of all OrderedItems
 
-        public  List<OrderItem> getAllOrderItems()
-        {
-           List<OrderItem> orderItems = orderItemRepository.GetAllOrderItems();
-            return orderItems;
-        }
         //method that calls insertOrderItem from OrderItemRepository class and returns true if number of affected rows is !=0
         public bool insertOrderItem(OrderItem o)
         {
             return orderItemRepository.InsertOrderItem(o) != 0;
-        }
-        
-        public bool DeleteOrderItemsWhereId(int billId)
-        {
-            return orderItemRepository.DeleteOrderItemsWhereId(billId) != 0;
         }
 
     }

@@ -23,14 +23,5 @@ namespace CaffeBusiness
         {
             return billRepository.InsertBill(b) != 0;
         }
-        public bool deleteBill(int b)
-        {
-            return billRepository.DeleteBill(b) != 0;
-        }
-
-        public bool DeleteBillWhereTableId(int tableId)
-        {
-            return billRepository.DeleteBillWhereTableId(tableId) != 0;
-        }
     }
 }

@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CaffeBusiness.dll" size="7680">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CaffeBusiness.dll" size="7168">
       <assemblyIdentity name="CaffeBusiness" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pjzZHc4DHxReKjt3g5WpqMwUCaEg15FXPhR/Q6YSwwU=</dsig:DigestValue>
+        <dsig:DigestValue>5hNnJBPrbIe8EpcUParKEJcJButQ4x/JU9N19szaeeg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,19 +61,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>SFfG+4yJECyxoVv+NHHoQq1JM9BucXRq3Csxao/aSpg=</dsig:DigestValue>
+        <dsig:DigestValue>N6+50lCm/HT6Bv3N8co3/jGG9ihhyQXHHgX2CT+rIDg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CaffeeData.dll" size="18432">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CaffeeData.dll" size="17920">
       <assemblyIdentity name="CaffeeData" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>htdf0flZIeJZAUwnI+t4S7MC8E1AXZ+PtS6lPl9FhYc=</dsig:DigestValue>
+        <dsig:DigestValue>dyeNAPhcAZWQb42L302N32NtYTqeZQKH5brjYeerpXA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

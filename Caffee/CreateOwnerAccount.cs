@@ -80,7 +80,7 @@ namespace Caffee
                 
                 Owner owner = new Owner(textBoxUserName.Text,textBoxPassword.Text);
                 userBusiness.insertNewOwner(owner);
-                InfoWarningError iwe = new InfoWarningError("You have successfully created waiter account!", "info", "OK", "CANCEL");
+                InfoWarningError iwe = new InfoWarningError("You have successfully created owner account!", "info", "OK", "CANCEL");
                 iwe.ShowDialog();
             }
 
