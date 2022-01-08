@@ -12,8 +12,10 @@ namespace Caffee
 {
     public partial class ChooseWindow : Form
     {
-        public ChooseWindow()
+        private string username = "";
+        public ChooseWindow(string username)
         {
+            this.username = username;
             InitializeComponent();
         }
 
@@ -32,7 +34,7 @@ namespace Caffee
 
         private void buttonContinue_Click(object sender, EventArgs e)
         {
-            var mw = new MainWindow();
+            var mw = new MainWindow(username,true);
             mw.Closed += (s, args) => this.Close();
             this.Hide();
             mw.Show();

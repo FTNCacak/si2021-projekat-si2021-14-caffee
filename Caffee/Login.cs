@@ -14,6 +14,7 @@ namespace Caffee
 {
     public partial class Login : Form
     {
+        public string passedusername;
         private readonly UserBusiness userBusiness;
         public Login()
         {
@@ -53,6 +54,8 @@ namespace Caffee
 
                 if(textBoxUserName.Text == u.UserName && textBoxPassword.Text == u.Password)
                 {
+                    passedusername = textBoxUserName.Text;
+                    Console.WriteLine(passedusername);
                     proceed = true;
                     if (u.Ownership)
                         ownership = true;
@@ -64,14 +67,14 @@ namespace Caffee
             {
                 if(ownership)
                 {
-                    var cw = new ChooseWindow();
+                    var cw = new ChooseWindow(passedusername);
                     cw.Closed += (s, args) => this.Close();
                     this.Hide();
                     cw.Show();
                 }
                 else
                 {
-                    var mw = new MainWindow();
+                    var mw = new MainWindow(passedusername, ownership);
                     mw.Closed += (s, args) => this.Close();
                     this.Hide();
                     mw.Show();
@@ -83,10 +86,6 @@ namespace Caffee
                 infoWarning.ShowDialog();
                 emptyTextBoxes();
             }
-            //provera unetih podataka
-            //ako je konobar ide se u glavni prozor
-            //ako je vlasnik ide se na sledecu formu(ovo ispod)
-            
         }
 
         private void emptyTextBoxes()

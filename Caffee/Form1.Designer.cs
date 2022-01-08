@@ -38,6 +38,8 @@ namespace Caffee
             this.button_windowed = new System.Windows.Forms.Button();
             this.button_close = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button_showMenu = new System.Windows.Forms.Button();
+            this.button_hideMenu = new System.Windows.Forms.Button();
             this.panel_sideMenu = new System.Windows.Forms.Panel();
             this.labelCopyrightInfo = new System.Windows.Forms.Label();
             this.button_logout = new System.Windows.Forms.Button();
@@ -49,8 +51,6 @@ namespace Caffee
             this.label_accountRole = new System.Windows.Forms.Label();
             this.label_accountUsername = new System.Windows.Forms.Label();
             this.pictureBox_accountPicture = new System.Windows.Forms.PictureBox();
-            this.button_showMenu = new System.Windows.Forms.Button();
-            this.button_hideMenu = new System.Windows.Forms.Button();
             this.panelFloor = new System.Windows.Forms.Panel();
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_titlebar_logo)).BeginInit();
@@ -145,6 +145,34 @@ namespace Caffee
             this.toolTip1.SetToolTip(this.button_close, "Close");
             this.button_close.UseVisualStyleBackColor = true;
             this.button_close.Click += new System.EventHandler(this.button_close_Click);
+            // 
+            // button_showMenu
+            // 
+            this.button_showMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_showMenu.BackgroundImage")));
+            this.button_showMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_showMenu.FlatAppearance.BorderSize = 0;
+            this.button_showMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_showMenu.Location = new System.Drawing.Point(0, 0);
+            this.button_showMenu.Name = "button_showMenu";
+            this.button_showMenu.Size = new System.Drawing.Size(38, 38);
+            this.button_showMenu.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.button_showMenu, "Show Menu");
+            this.button_showMenu.UseVisualStyleBackColor = true;
+            this.button_showMenu.Click += new System.EventHandler(this.button_showMenu_Click);
+            // 
+            // button_hideMenu
+            // 
+            this.button_hideMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_hideMenu.BackgroundImage")));
+            this.button_hideMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_hideMenu.FlatAppearance.BorderSize = 0;
+            this.button_hideMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_hideMenu.Location = new System.Drawing.Point(178, 0);
+            this.button_hideMenu.Name = "button_hideMenu";
+            this.button_hideMenu.Size = new System.Drawing.Size(38, 38);
+            this.button_hideMenu.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.button_hideMenu, "Hide Menu");
+            this.button_hideMenu.UseVisualStyleBackColor = true;
+            this.button_hideMenu.Click += new System.EventHandler(this.button_hideMenu_Click);
             // 
             // panel_sideMenu
             // 
@@ -289,41 +317,12 @@ namespace Caffee
             // pictureBox_accountPicture
             // 
             this.pictureBox_accountPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_accountPicture.Image = global::Caffee.Properties.Resources.waiter;
             this.pictureBox_accountPicture.Location = new System.Drawing.Point(44, 44);
             this.pictureBox_accountPicture.Name = "pictureBox_accountPicture";
             this.pictureBox_accountPicture.Size = new System.Drawing.Size(128, 128);
             this.pictureBox_accountPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_accountPicture.TabIndex = 2;
             this.pictureBox_accountPicture.TabStop = false;
-            // 
-            // button_showMenu
-            // 
-            this.button_showMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_showMenu.BackgroundImage")));
-            this.button_showMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_showMenu.FlatAppearance.BorderSize = 0;
-            this.button_showMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_showMenu.Location = new System.Drawing.Point(0, 0);
-            this.button_showMenu.Name = "button_showMenu";
-            this.button_showMenu.Size = new System.Drawing.Size(38, 38);
-            this.button_showMenu.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.button_showMenu, "Show Menu");
-            this.button_showMenu.UseVisualStyleBackColor = true;
-            this.button_showMenu.Click += new System.EventHandler(this.button_showMenu_Click);
-            // 
-            // button_hideMenu
-            // 
-            this.button_hideMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_hideMenu.BackgroundImage")));
-            this.button_hideMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_hideMenu.FlatAppearance.BorderSize = 0;
-            this.button_hideMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_hideMenu.Location = new System.Drawing.Point(178, 0);
-            this.button_hideMenu.Name = "button_hideMenu";
-            this.button_hideMenu.Size = new System.Drawing.Size(38, 38);
-            this.button_hideMenu.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.button_hideMenu, "Hide Menu");
-            this.button_hideMenu.UseVisualStyleBackColor = true;
-            this.button_hideMenu.Click += new System.EventHandler(this.button_hideMenu_Click);
             // 
             // panelFloor
             // 

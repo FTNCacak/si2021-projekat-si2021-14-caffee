@@ -189,3 +189,5 @@ C:\Users\Bane\Desktop\drazo peder\si2021-projekat-si2021-14-caffee\Caffee\obj\De
 C:\Users\Bane\Desktop\drazo peder\si2021-projekat-si2021-14-caffee\Caffee\obj\Debug\Caffee.csproj.CopyComplete
 C:\Users\Bane\Desktop\drazo peder\si2021-projekat-si2021-14-caffee\Caffee\obj\Debug\Caffee.exe
 C:\Users\Bane\Desktop\drazo peder\si2021-projekat-si2021-14-caffee\Caffee\obj\Debug\Caffee.pdb
+D:\SI PROJEKAT\si2021-projekat-si2021-14-caffee\Caffee\bin\Debug\FluentValidation.dll
+D:\SI PROJEKAT\si2021-projekat-si2021-14-caffee\Caffee\bin\Debug\FluentValidation.xml

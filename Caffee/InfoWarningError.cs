@@ -24,14 +24,17 @@ namespace Caffee
             if(String.Equals(imageType,s_info))
             {
                 pictureBoxImage.BackgroundImage = Properties.Resources.information;
+                this.Name = "Info";
             }
             else if (String.Equals(imageType, s_warning))
             {
                 pictureBoxImage.BackgroundImage = Properties.Resources.information;
+                this.Name = "Warning";
             }
             else if(String.Equals(imageType,s_error))
             {
                 pictureBoxImage.BackgroundImage = Properties.Resources.error;
+                this.Name = "Error";
             }
             else
             {

@@ -18,12 +18,21 @@ namespace Caffee
     {
         private readonly TableBusiness tableBusiness = new TableBusiness();
         private readonly ReceiptBusiness receiptBusiness = new ReceiptBusiness();
+        private string username;
+        private string rolename;
+        private bool ownership;
 
         ToolTip tableToolTip = new ToolTip();
-        public MainWindow()
+        public MainWindow(string user_name, bool ownership)
         {
+            this.ownership = ownership;
+            username = user_name;
+            if (ownership)
+                rolename = "Owner";
+            else
+                rolename = "Waiter";
+
             InitializeComponent();
-            this.DoubleBuffered = true;
         }
 
         private void MainWindow_Load(object sender, EventArgs e)
@@ -34,9 +43,6 @@ namespace Caffee
             this.WindowState = FormWindowState.Normal;
             this.Location = new Point(0, 0);
             this.Size =  new Size(w, h);
-
-            //Loading account related data
-            LoadAccountData();
 
             //Side panel settings
             HideSideMenuContent();
@@ -99,8 +105,21 @@ namespace Caffee
             button_logout.Visible = true;
             pictureBox_accountPicture.Visible = true;
             label_accountUsername.Visible = true;
+            label_accountUsername.Text = username;
             label_accountRole.Visible = true;
+            label_accountRole.Text = rolename;
             panel_accountPanel.BackColor = System.Drawing.Color.FromArgb(255, 176, 137, 104);
+
+            if(ownership)
+            {
+                pictureBox_accountPicture.BackgroundImage = Properties.Resources.owner;
+                button_dailyRecap.Enabled = true;
+            }
+            else
+            {
+                pictureBox_accountPicture.BackgroundImage = Properties.Resources.waiter;
+                button_dailyRecap.Enabled = false;
+            }
         }
 
         private void HideSideMenuContent()
@@ -114,30 +133,6 @@ namespace Caffee
             label_accountRole.Visible = false;
             panel_accountPanel.BackColor = panel_sideMenu.BackColor;
 
-        }
-
-        private void SetAccountDetails(bool isOwner, string username)
-        {
-            label_accountUsername.Text = username;
-
-            if (isOwner == true)
-            {
-                label_accountRole.Text = "Owner";
-                button_dailyRecap.Enabled = true;
-                pictureBox_accountPicture.BackgroundImage = Properties.Resources.owner;
-            }
-            else
-            {
-                label_accountRole.Text = "Waiter";
-                button_dailyRecap.Enabled = false;
-                pictureBox_accountPicture.BackgroundImage = Properties.Resources.waiter;
-            }
-        }
-
-        private void LoadAccountData() //funkciju napisati nakon izrade login forme
-        {
-            //ucitavanje podataka o ulogovanom korisniku
-            //pozivanje funkcije setaccountdetails sa prosledjenim podacima
         }
 
         private void button_addTable_Click(object sender, EventArgs e)
@@ -168,11 +163,12 @@ namespace Caffee
             int dPosX = (Screen.PrimaryScreen.Bounds.Width / 2) - (ms.Size.Width / 2);
             int dposY = (Screen.PrimaryScreen.Bounds.Height / 2) - (ms.Size.Height / 2);
             ms.Location = new Point(dPosX, dposY);
-            ms.ShowDialog(); //ShowDialog()se gasi sa Dispose()               
+            ms.ShowDialog();              
         }
 
         private void button_logout_Click(object sender, EventArgs e)
         {
+            pictureBox_accountPicture.BackgroundImage = null;
             this.Hide();
             var lg = new Login();
             lg.Closed += (s, args) => this.Close();
