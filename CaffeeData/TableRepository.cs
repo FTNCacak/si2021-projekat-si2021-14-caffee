@@ -115,44 +115,7 @@ namespace CaffeeData
                 
                 return command.ExecuteNonQuery();
             }
-        }
-        public int ResetData()
-        {
-            using (SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
-            {
-                sqlConnection.Open();
-
-                SqlCommand command = new SqlCommand();
-                
-                command.Connection = sqlConnection;
-                
-                command.CommandText = string.Format("ALTER Tables table_number AUTO_INCREMENT");
-                
-                return command.ExecuteNonQuery();
-            }
-        }
-        //public int GetLatestId()
-        //{
-        //    using (SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
-        //    {
-        //        SqlCommand command = new SqlCommand();
-
-        //        command.Connection = sqlConnection;
-
-        //        command.CommandText = string.Format("SELECT MAX(table_number) FROM Tables");
-
-        //        sqlConnection.Open();
-
-        //        SqlDataReader dataReader = command.ExecuteReader();
-        //        if (dataReader.Read())
-        //        {
-        //            latestId = dataReader.GetInt32(0);
-        //        }
-        //        return latestId;
-
-        //    }
-        //}
-       
+        } 
         public int ocupied_check(bool check)
         {
             if (check)

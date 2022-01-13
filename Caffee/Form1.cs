@@ -72,8 +72,7 @@ namespace Caffee
                 tableBusiness.updateTable(table.Id,table.position_w,table.position_h);
 
             }
-            this.Close(); //ovo da pogledam jos jednom da vidim da li se ovako gasi aplikacija
-            //application.exit je -----da promenim na kraju
+            this.Close(); 
         }
 
         private void button_minimize_Click(object sender, EventArgs e)

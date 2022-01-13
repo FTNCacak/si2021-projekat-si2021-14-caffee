@@ -118,29 +118,6 @@ namespace CaffeeData
                 return id;
             }
         }
-        public decimal GetPriceOfItemByName(string itemName)
-        {
-            using (SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
-            {
-                SqlCommand sql = new SqlCommand();
-
-                sql.Connection = sqlConnection;
-
-                sql.CommandText = string.Format("SELECT price FROM Items WHERE name='{0}'", itemName);
-
-                sqlConnection.Open();
-
-                SqlDataReader dataReader = sql.ExecuteReader();
-
-                decimal price = 0;
-
-                if (dataReader.Read())
-                    price = dataReader.GetDecimal(0);
-
-                return price;
-            }
-        }
-
         public decimal GetPriceOfItemById(int id)
         {
             using (SqlConnection sqlConnection = new SqlConnection(constant.connectionString))

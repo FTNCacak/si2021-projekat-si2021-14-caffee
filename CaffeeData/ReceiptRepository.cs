@@ -45,10 +45,10 @@ namespace CaffeeData
             }
         }
 
-        public int InsertReceipt(Receipt r)
+    public int InsertReceipt(Receipt r)
+    {
+        using (SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
         {
-            using (SqlConnection sqlConnection = new SqlConnection(constant.connectionString))
-            {
                 SqlCommand command = new SqlCommand();
 
                 command.Connection = sqlConnection;
@@ -58,8 +58,8 @@ namespace CaffeeData
                 sqlConnection.Open();
 
                 return command.ExecuteNonQuery();
-            }
         }
+    }
 
     }
 }

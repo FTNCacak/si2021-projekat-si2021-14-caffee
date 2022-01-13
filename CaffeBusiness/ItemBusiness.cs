@@ -36,11 +36,6 @@ namespace CaffeBusiness
         {
             return itemRepository.GetIdOfNameItem(itemName);
         }
-        public decimal GetPriceOfItem(string itemName)
-        {
-            return itemRepository.GetPriceOfItemByName(itemName);
-        }
-
         public decimal GetPriceOfItemByName(int itemId)
         {
             return itemRepository.GetPriceOfItemById(itemId);

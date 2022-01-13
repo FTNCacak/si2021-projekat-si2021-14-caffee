@@ -59,12 +59,7 @@ namespace Caffee
             }
             occ = false;
             label_Total_Price.Text = "Total Price: " + RefreshPrice() + " RSD";
-
-
-            //testiranje date
-            Console.WriteLine("Danas je: " + DateTime.Now);
-
-        }
+   }
 
         
         private void button_close_Click(object sender, EventArgs e)
@@ -97,43 +92,8 @@ namespace Caffee
             }
             else
             {
-                Console.WriteLine("Evo greske");
+                InfoWarningError infoWarningError = new InfoWarningError("You have not selected anything from the list of items","error","OK","CANCEL");
             }
-
-            //bool occupied = false;
-
-            //foreach (Table table in tableBusiness.getAllTables())
-            //{
-            //    if(table.Id == idTable)
-            //    {
-            //        occupied = table.Occupied;
-            //    }
-            //}
-
-            //if (occupied == false)
-            //{
-            //    Bill bill = new Bill(idTable);
-            //    billBusiness.insertBill(bill);
-            //    IfTableExitsBillId =  bill.Id = billBusiness.getAllBills().Last().Id;
-            //    OrderItem orderItem = new OrderItem(bill.Id, itemBusiness.GetIdOfItemName(comboItem), ammount);
-            //    orderItemBusiness.insertOrderItem(orderItem);
-            //}
-            //else
-            //{
-            //    OrderItem orderItem = new OrderItem(IfTableExitsBillId, itemBusiness.GetIdOfItemName(comboItem), ammount);
-            //    orderItemBusiness.insertOrderItem(orderItem);
-            //}
-
-
-            //Bill bill = new Bill(idTable);
-            //billBusiness.insertBill(bill);
-            //bill.Id=billBusiness.getAllBills().Last().Id;
-            //OrderItem orderItem = new OrderItem(bill.Id,itemBusiness.GetIdOfItemName(comboItem),ammount);
-            //Console.WriteLine(bill.Id+" "+ itemBusiness.GetIdOfItemName(comboItem) + " " + ammount);
-            //orderItemBusiness.insertOrderItem(orderItem);
-
-
-
         }
 
         private void button_Charge_Click(object sender, EventArgs e)
@@ -168,13 +128,6 @@ namespace Caffee
             label_Total_Price.Text = "Total price: 00.00 RSD";
 
             File.WriteAllText(Constants.GetPath() + "Sto" + this.idTable+".txt","");
-
-            
-            //orderItemBusiness.DeleteOrderItemsWhereId(billId);
-            ////this.billGlobal = billId;
-            //billBusiness.DeleteBillWhereTableId(idTable);
-
-
         }
         private List<OrderItem> GetOrderItemsFromFile(int tableId)
         {
