@@ -93,6 +93,7 @@ namespace Caffee
             else
             {
                 InfoWarningError infoWarningError = new InfoWarningError("You have not selected anything from the list of items","error","OK","CANCEL");
+                infoWarningError.ShowDialog();
             }
         }
 
@@ -139,12 +140,10 @@ namespace Caffee
             foreach (string item in all)
             {
                 string[] items = item.Split('+');
-                Console.WriteLine("Item name:{0} item quantity:{1}",items[0],items[1]);
                 OrderItem oi = new OrderItem();
 
                 oi.ItemId = itemBusiness.GetIdOfItemName(items[0]);
                 oi.ItemQuantity = Convert.ToInt32(items[1]);
-                Console.WriteLine(oi.ItemId + " " + oi.ItemQuantity);
                 orderItems.Add(oi);
             }
 
@@ -162,8 +161,6 @@ namespace Caffee
                 int itemId = orderItem.ItemId;
 
                 decimal priceOfItem = itemBusiness.GetPriceOfItemByName(itemId);
-
-                Console.WriteLine(priceOfItem);
 
                 currentPrice += priceOfItem * orderItem.ItemQuantity;
             }

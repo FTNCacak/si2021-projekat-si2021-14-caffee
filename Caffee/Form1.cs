@@ -47,8 +47,6 @@ namespace Caffee
             //Side panel settings
             HideSideMenuContent();
             panel_sideMenu.Size = new Size(38, panel_sideMenu.Height);
-            /*TO DO: Na kraju projekta da rucno vratim meni na 38px sirinu zbog glitcha na loadovanju stranice.
-            Linija koda iznad ovog komentara se potom moze obrisati*/
 
             if(tableBusiness.getAllTables().Count > 0)
             {
